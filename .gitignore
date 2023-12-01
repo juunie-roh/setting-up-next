@@ -6,12 +6,31 @@
 .pnp.js
 .yarn/install-state.gz
 
+# database
+*/db
+
 # testing
 /coverage
 
+# storybook
+storybook-static
+
+# playwright
+/test-results/
+/playwright-report/
+/playwrite/.cache/
+
 # next.js
-/.next/
-/out/
+/.next
+/out
+
+# next-sitemap
+public/robots.txt
+public/sitemap.xml
+public/sitemap-*.xml
+
+# cache
+.swc/
 
 # production
 /build
@@ -19,14 +38,19 @@
 # misc
 .DS_Store
 *.pem
+Thumbs.db
 
 # debug
 npm-debug.log*
+pmpm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
 # local env files
 .env*.local
+
+# local folder
+local
 
 # vercel
 .vercel
