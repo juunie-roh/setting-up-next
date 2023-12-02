@@ -22,8 +22,8 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-    - run: npm ci
-    - run: npx next build
+        cache: 'yarn'
+    - run: yarn --frozen-lockfile
+    - run: yarn build
 
     
