@@ -1,7 +1,7 @@
-import Link from "next/link";
-import type { ReactNode } from "react";
+import Link from 'next/link';
+import type { ReactNode } from 'react';
 
-import { AppConfig } from "@/utils/AppConfig";
+import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
   meta?: ReactNode;
