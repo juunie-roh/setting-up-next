@@ -13,11 +13,17 @@ const Meta = (props: IMetaProps) => {
   <>
     <Head>
       <meta charSet="UTF-8" key="charset" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" key="viewport" />
+      <meta
+        name="viewport"
+        content="width=device-width,initial-scale=1"
+        key="viewport"
+      />
       <link rel="icon" href="/favicon.ico" key="favicon" />
     </Head>
     <NextSeo
-      title={props.title} description={props.description} canonical={props.canonical}
+      title={props.title}
+      description={props.description}
+      canonical={props.canonical}
       openGraph={{
         title: props.title,
         description: props.description,
@@ -26,7 +32,7 @@ const Meta = (props: IMetaProps) => {
         siteName: AppConfig.site_name,
       }}
     />
-  </>
+  </>;
 };
 
 export { Meta };
