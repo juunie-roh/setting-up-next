@@ -3,4 +3,5 @@ export const AppConfig = {
   title: 'Juun',
   description: 'desc',
   locale: 'ko',
+  author: 'Juun',
 };

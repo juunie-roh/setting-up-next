@@ -9,7 +9,7 @@ type IMetaProps = {
   canonical?: string;
 };
 
-const Meta = (props: IMetaProps) => {
+const Meta = (props: IMetaProps) => (
   <>
     <Head>
       <meta charSet="UTF-8" key="charset" />
@@ -32,7 +32,7 @@ const Meta = (props: IMetaProps) => {
         siteName: AppConfig.site_name,
       }}
     />
-  </>;
-};
+  </>
+);
 
 export { Meta };
