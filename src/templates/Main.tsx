@@ -22,4 +22,4 @@ const Main = (props: IMainProps) => (
   </div>
 );
 
-export default Main;
+export { Main };
