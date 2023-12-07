@@ -45,6 +45,7 @@ const Main = (props: IMainProps) => (
       <footer className="border-t border-gray-300 py-8 text-center text-sm">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Made by&nbsp;
         {AppConfig.author}
+        <a href="https://juun.vercel.app">Juun</a>
       </footer>
     </div>
   </div>
