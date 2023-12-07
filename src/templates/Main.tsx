@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import type { ReactNode } from 'react';
+import { useRouter } from 'next/router';
+import { type ReactNode } from 'react';
 
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -9,60 +10,76 @@ type IMainProps = {
   children: ReactNode;
 };
 
-const Main = (props: IMainProps) => (
-  <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
-    {props.meta}
+const menuData = [
+  { id: 'about', name: 'about', path: '/about' },
+  { id: 'item1', name: 'item1', path: '/item1' },
+  { id: 'item2', name: 'item2', path: '/item2' },
+];
 
-    <div className="mx-auto">
-      <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:p-8">
-        <div className="flex items-baseline gap-4">
-          <h1 className="text-xl font-bold text-gray-900 lg:text-3xl">
-            <Link href="/">{AppConfig.title}</Link>
-          </h1>
-          <ul className="flex gap-2 lg:text-lg">
-            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
-              <Link href="/about">about</Link>
-            </li>
-            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
-              <Link href="/item1">item1</Link>
-            </li>
-            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
-              <Link href="/item2">item2</Link>
-            </li>
-          </ul>
-        </div>
-        <a
-          className="pointer-events-auto flex place-items-center gap-2 p-0 lg:p-2 lg:text-lg"
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          By{' '}
-          <Image
-            src="/vercel.svg"
-            alt="Vercel Logo"
-            className="dark:invert"
-            width={100}
-            height={24}
-            priority
-          />
-        </a>
-      </header>
-      <main className="flex min-h-screen flex-col items-center justify-between p-8 pt-32 lg:p-12 lg:pt-48">
-        {props.children}
-      </main>
+const Main = (props: IMainProps) => {
+  const router = useRouter();
 
-      <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base">
-        © Copyright {new Date().getFullYear()} {AppConfig.title}. Made by&nbsp;
-        <a
-          href="https://github.com/juunie-roh/setting-up-next"
-          className="font-semibold"
-        >
-          {AppConfig.author}
-        </a>
-      </footer>
+  return (
+    <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
+      {props.meta}
+
+      <div className="mx-auto">
+        <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:p-8">
+          <div className="flex items-baseline gap-4">
+            <h1 className="text-xl font-bold text-gray-900 lg:text-3xl">
+              <Link href="/">{AppConfig.title}</Link>
+            </h1>
+            <nav>
+              <ul className="flex gap-2 lg:text-lg">
+                {menuData.map((menu) => {
+                  return (
+                    <li
+                      className={`${
+                        router.pathname === menu.path ? 'bg-gray-400 ' : ''
+                      }inline-block rounded-lg px-2 hover:text-gray-900 hover:underline`}
+                      key={menu.id}
+                    >
+                      <Link href={menu.path}>{menu.name}</Link>
+                    </li>
+                  );
+                })}
+              </ul>
+            </nav>
+          </div>
+          <a
+            className="pointer-events-auto flex place-items-center gap-2 p-0 lg:p-2 lg:text-lg"
+            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            By{' '}
+            <Image
+              src="/vercel.svg"
+              alt="Vercel Logo"
+              className="dark:invert"
+              width={100}
+              height={24}
+              priority
+            />
+          </a>
+        </header>
+        <main className="flex min-h-screen flex-col items-center justify-between p-8 pt-32 lg:p-12 lg:pt-48">
+          {props.children}
+        </main>
+
+        <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base">
+          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made
+          by&nbsp;
+          <a
+            href="https://github.com/juunie-roh/setting-up-next"
+            className="font-semibold"
+          >
+            {AppConfig.author}
+          </a>
+        </footer>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export { Main };
