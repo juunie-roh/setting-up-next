@@ -10,6 +10,7 @@
     "format": "next lint --fix && prettier '**/*.{json,yaml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty",
     "test": "jest",
+    "commit": "cz",
     "prepare": "husky install",
     "postbuild": "next-sitemap"
   },
@@ -37,6 +38,7 @@
     "@types/react-dom": "^18",
     "@typescript-eslint/eslint-plugin": "^6.13.1",
     "autoprefixer": "^10.0.1",
+    "commitizen": "^4.3.0",
     "cssnano": "^6.0.1",
     "eslint": "^8.55.0",
     "eslint-config-airbnb": "^19.0.4",
