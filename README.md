@@ -2,6 +2,8 @@
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+Following [ixartz](https://github.com/ixartz/Next-js-Boilerplate) Next js Boilerplate to understand all used packages, build and test progress within it.
+
 ## Features
 
 - ⚡ [Next.js](https://nextjs.org) with App Router and Page Router support
