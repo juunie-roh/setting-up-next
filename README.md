@@ -1,3 +1,5 @@
+# Personal Frontend Dev Env Setting Project
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Features
@@ -8,25 +10,24 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 - ✅ Strict Mode for TypeScript and React 18
 - ♻️ Type-safe environment variables with T3 Env
 - ⌨️ Form with React Hook From
-- 🔴 Validation library with Zod
+- 🔴 ~~Validation library with Zod~~ (scheduled)
 - 📏 Linter with [ESLint](https://eslint.org) (default NextJS, NextJS Core Web Vitals, Tailwind CSS and Airbnb configuration)
 - 💖 Code Formatter with [Prettier](https://prettier.io)
 - 🦊 Husky for Git Hooks
 - 🚫 Lint-staged for running linters on Git staged files
 - 🚓 Lint git commit with Commitlint
 - 📓 Write standard compliant commit messages with Commitizen
-- 🦺 ~~Unit Testing with Jest and React Testing Library~~ (scheduled)
+- 🦺 Unit Testing with Jest and React Testing Library
 - 🧪 ~~Integration and E2E Testing with Playwright~~ (scheduled)
-- 👷 ~~Run tests on pull request with GitHub Actions~~ (scheduled)
+- 👷 Run tests on pull request with GitHub Actions
 - 🎉 ~~Storybook for UI development~~ (scheduled)
 - 🖥️ ~~Monitoring as Code with [Checkly](https://www.checklyhq.com)~~ (scheduled)
 - 🎁 Automatic changelog generation with Semantic Release
 - 💡 Absolute Imports using `@` prefix
-- 🗂 VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest
+- 🗂 ~~VSCode configuration: Debug, Settings, Tasks and extension for PostCSS, ESLint, Prettier, TypeScript, Jest~~
 - 🤖 SEO metadata, JSON-LD and Open Graph tags with Next SEO
 - 🗺️ Sitemap.xml and robots.txt with next-sitemap
 - ⚙️ ~~[Bundler Analyzer](https://www.npmjs.com/package/@next/bundle-analyzer)~~ (scheduled)
-- 🌈 Include a FREE minimalist theme
 
 Built-in feature from Next.js:
 
@@ -37,6 +38,7 @@ Built-in feature from Next.js:
 ## Getting Started
 
 **Note**: This project is using `yarn` as a package manager.
+
 First, run the development server:
 
 ```bash
