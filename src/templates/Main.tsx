@@ -19,7 +19,17 @@ const Main = (props: IMainProps) => (
           <h1 className="text-xl font-bold text-gray-900 lg:text-3xl">
             <Link href="/">{AppConfig.title}</Link>
           </h1>
-          <p className="lg:text-lg">Header Area Here</p>
+          <ul className="flex gap-2 lg:text-lg">
+            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
+              <Link href="/about">about</Link>
+            </li>
+            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
+              <Link href="/item1">item1</Link>
+            </li>
+            <li className="inline-block rounded-lg bg-gray-400 px-2 hover:text-gray-900 hover:underline">
+              <Link href="/item2">item2</Link>
+            </li>
+          </ul>
         </div>
         <a
           className="pointer-events-auto flex place-items-center gap-2 p-0 lg:p-2 lg:text-lg"
@@ -42,10 +52,14 @@ const Main = (props: IMainProps) => (
         {props.children}
       </main>
 
-      <footer className="border-t border-gray-300 py-8 text-center text-sm">
+      <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base">
         © Copyright {new Date().getFullYear()} {AppConfig.title}. Made by&nbsp;
-        {AppConfig.author}
-        <a href="https://juun.vercel.app">Juun</a>
+        <a
+          href="https://github.com/juunie-roh/setting-up-next"
+          className="font-semibold"
+        >
+          {AppConfig.author}
+        </a>
       </footer>
     </div>
   </div>

@@ -4,12 +4,23 @@ import { Main } from './Main';
 
 describe('Main template', () => {
   describe('Render method', () => {
-    it('what', () => {
+    it('should have 3 menu items', () => {
+      render(<Main meta={null}>{null}</Main>);
+
+      const menuItemList = screen.getAllByRole('listitem');
+
+      expect(menuItemList).toHaveLength(3);
+    });
+
+    it('should have a link to Juun`s Github', () => {
       render(<Main meta={null}>{null}</Main>);
 
       const copyrightSection = screen.getByText(/© Copyright/);
       const copyrightLink = within(copyrightSection).getByRole('link');
-      expect(copyrightLink).toHaveAttribute('href', 'https://juun.vercel.app');
+      expect(copyrightLink).toHaveAttribute(
+        'href',
+        'https://github.com/juunie-roh/setting-up-next',
+      );
     });
   });
 });
