@@ -36,7 +36,7 @@ const Main = (props: IMainProps) => {
                     <li
                       className={`${
                         router.pathname === menu.path ? 'bg-gray-400 ' : ''
-                      }inline-block rounded-lg px-2 hover:text-gray-900 hover:underline`}
+                      }inline-block rounded-lg px-2 hover:text-gray-900`}
                       key={menu.id}
                     >
                       <Link href={menu.path}>{menu.name}</Link>
