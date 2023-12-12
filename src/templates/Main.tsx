@@ -36,8 +36,10 @@ const Main = (props: IMainProps) => {
                   return (
                     <li
                       className={`${
-                        router.pathname === menu.path ? 'bg-gray-400 ' : ''
-                      }inline-block rounded-lg px-2 hover:text-gray-900`}
+                        router.pathname === menu.path
+                          ? 'underline underline-offset-2 '
+                          : ''
+                      }inline-block rounded-lg px-2 hover:bg-gray-400 hover:text-gray-900`}
                       key={menu.id}
                     >
                       <Link href={menu.path}>{menu.name}</Link>
@@ -64,7 +66,7 @@ const Main = (props: IMainProps) => {
             />
           </a>
         </header>
-        <main className="flex min-h-screen flex-col items-center justify-between p-8 pt-32 lg:p-12 lg:pt-48">
+        <main className="flex min-h-screen p-8 pt-32 lg:p-12 lg:pt-48">
           {props.children}
         </main>
 

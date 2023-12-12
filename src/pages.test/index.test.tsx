@@ -1,11 +1,11 @@
 import { render, screen } from '@testing-library/react';
 
-import About from '@/pages/about';
+import Index from '@/pages/index';
 
-describe('About page', () => {
+describe('Index page', () => {
   describe('Render method', () => {
     it('should have 3 paragraphs of `Lorem ipsum`', () => {
-      render(<About />);
+      render(<Index />);
       const paragraph = screen.getAllByText(/Lorem ipsum/);
       expect(paragraph).toHaveLength(3);
     });
