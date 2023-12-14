@@ -17,6 +17,11 @@ module.exports = {
     },
     extend: {
       colors: {
+        backgroundImage: {
+          'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+          'gradient-conic':
+            'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        },
         gray: {
           100: '#f7fafc',
           200: '#edf2f7',
@@ -40,11 +45,9 @@ module.exports = {
           900: '#2a4365',
         },
       },
-      backgroundImage: {
-        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
-        'gradient-conic':
-          'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
-      },
+      // fontFamily: {
+      //   'antonio': ['Antonio', 'sans-serif'],
+      // },
     },
   },
   plugins: [],

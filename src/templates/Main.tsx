@@ -24,7 +24,7 @@ const Main = (props: IMainProps) => {
       {props.meta}
 
       <div className="mx-auto">
-        <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 p-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:p-8">
+        <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:px-12 lg:py-8">
           <div className="flex items-baseline gap-4">
             <h1 className="text-xl font-bold text-gray-900 lg:text-3xl">
               <Link href="/">{AppConfig.title}</Link>
@@ -66,7 +66,7 @@ const Main = (props: IMainProps) => {
             />
           </a>
         </header>
-        <main className="flex min-h-screen p-8 pt-32 lg:p-12 lg:pt-48">
+        <main className="flex min-h-screen flex-col p-8 pt-32 lg:p-12 lg:pt-48">
           {props.children}
         </main>
 

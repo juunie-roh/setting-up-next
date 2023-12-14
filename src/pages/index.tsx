@@ -30,6 +30,9 @@ const Index = () => (
         ratione.
       </p>
     </DefaultPage>
+    <DefaultPage>
+      <p>Testing Div</p>
+    </DefaultPage>
   </Main>
 );
 
