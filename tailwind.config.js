@@ -14,6 +14,7 @@ module.exports = {
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
+      '10xl': '10rem',
     },
     extend: {
       colors: {
@@ -45,9 +46,9 @@ module.exports = {
           900: '#2a4365',
         },
       },
-      // fontFamily: {
-      //   'antonio': ['Antonio', 'sans-serif'],
-      // },
+      fontFamily: {
+        antonio: ['Antonio', 'sans-serif'], // weight:700, font-bold only
+      },
     },
   },
   plugins: [],

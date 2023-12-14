@@ -19,9 +19,6 @@ const Meta = (props: IMetaProps) => (
         key="viewport"
       />
       <link rel="icon" href="/favicon.ico" key="favicon" />
-      {/* <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin='' />
-      <link href="https://fonts.googleapis.com/css2?family=Antonio:wght@700&display=swap" rel="stylesheet" /> */}
     </Head>
     <NextSeo
       title={props.title}

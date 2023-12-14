@@ -31,7 +31,7 @@ const Index = () => (
       </p>
     </DefaultPage>
     <DefaultPage>
-      <p>Testing Div</p>
+      <p className="font-antonio text-10xl font-bold text-black">Juun</p>
     </DefaultPage>
   </Main>
 );

@@ -26,7 +26,7 @@ const Main = (props: IMainProps) => {
       <div className="mx-auto">
         <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:px-12 lg:py-8">
           <div className="flex items-baseline gap-4">
-            <h1 className="text-xl font-bold text-gray-900 lg:text-3xl">
+            <h1 className="font-antonio text-xl font-bold text-gray-900 lg:text-3xl">
               <Link href="/">{AppConfig.title}</Link>
             </h1>
             <nav>
