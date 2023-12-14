@@ -11,7 +11,9 @@ const Index = () => (
     }
   >
     <DefaultSection>
-      <h2 className="font-antonio text-10xl font-bold text-gray-900">Juun</h2>
+      <h2 className="font-antonio text-10xl font-bold text-gray-900 dark:text-gray-100">
+        Juun
+      </h2>
     </DefaultSection>
     <DefaultSection>
       <p>

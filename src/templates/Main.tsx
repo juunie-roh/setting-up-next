@@ -26,7 +26,7 @@ const Main = (props: IMainProps) => {
       <div className="mx-auto">
         <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:px-12 lg:py-8">
           <div className="flex items-baseline gap-4">
-            <h1 className="font-antonio text-xl font-bold text-gray-900 lg:text-3xl">
+            <h1 className="font-antonio text-xl font-bold text-gray-900 dark:text-gray-100 lg:text-3xl">
               <Link href="/">{AppConfig.title}</Link>
             </h1>
             <nav>
@@ -37,9 +37,9 @@ const Main = (props: IMainProps) => {
                     <li
                       className={`${
                         router.pathname === menu.path
-                          ? 'text-gray-900 underline underline-offset-2 '
-                          : 'text-gray-700 '
-                      }inline-block rounded-lg px-2 hover:bg-gray-400 hover:text-gray-900`}
+                          ? 'text-gray-900 underline underline-offset-2 dark:text-gray-100 '
+                          : 'text-gray-700 dark:text-gray-400 '
+                      }inline-block rounded-lg px-2 hover:bg-gray-400 hover:text-gray-900 dark:hover:bg-neutral-800 dark:hover:text-gray-100`}
                       key={menu.id}
                     >
                       <Link href={menu.path}>{menu.name}</Link>
@@ -70,7 +70,7 @@ const Main = (props: IMainProps) => {
           {props.children}
         </main>
 
-        <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base">
+        <footer className="border-t border-gray-300 py-6 text-center text-sm dark:border-neutral-800 lg:py-8 lg:text-base">
           © Copyright {new Date().getFullYear()} {AppConfig.title}. Made
           by&nbsp;
           <a
