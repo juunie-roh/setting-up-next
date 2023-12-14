@@ -37,8 +37,8 @@ const Main = (props: IMainProps) => {
                     <li
                       className={`${
                         router.pathname === menu.path
-                          ? 'underline underline-offset-2 '
-                          : ''
+                          ? 'text-gray-900 underline underline-offset-2 '
+                          : 'text-gray-700 '
                       }inline-block rounded-lg px-2 hover:bg-gray-400 hover:text-gray-900`}
                       key={menu.id}
                     >
