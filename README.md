@@ -22,7 +22,7 @@ Following [ixartz](https://github.com/ixartz/Next-js-Boilerplate) Next js Boiler
 - 🦺 Unit Testing with Jest and React Testing Library
 - 🧪 ~~Integration and E2E Testing with Playwright~~ (scheduled)
 - 👷 Run tests on pull request with GitHub Actions
-- 🎉 ~~Storybook for UI development~~ (scheduled)
+- 🎉 Storybook for UI development
 - 🖥️ ~~Monitoring as Code with [Checkly](https://www.checklyhq.com)~~ (scheduled)
 - 🎁 Automatic changelog generation with Semantic Release
 - 💡 Absolute Imports using `@` prefix
