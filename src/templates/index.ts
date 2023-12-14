@@ -1,4 +1,4 @@
-import { DefaultPage } from './DefaultPage';
+import { DefaultSection } from './DefaultSection';
 import { Main } from './Main';
 
-export { DefaultPage, Main };
+export { DefaultSection, Main };

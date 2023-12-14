@@ -4,7 +4,7 @@ type IDefaultPageProps = {
   children: ReactNode;
 };
 
-const DefaultPage = (props: IDefaultPageProps) => {
+const DefaultSection = (props: IDefaultPageProps) => {
   return (
     <div className="flex w-full flex-col items-center justify-between pb-8 lg:pb-12">
       {props.children}
@@ -12,4 +12,4 @@ const DefaultPage = (props: IDefaultPageProps) => {
   );
 };
 
-export { DefaultPage };
+export { DefaultSection };

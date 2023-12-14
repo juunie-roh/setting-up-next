@@ -1,5 +1,5 @@
 import { Meta } from '@/layouts/Meta';
-import { DefaultPage, Main } from '@/templates';
+import { DefaultSection, Main } from '@/templates';
 
 const Index = () => (
   <Main
@@ -10,7 +10,10 @@ const Index = () => (
       />
     }
   >
-    <DefaultPage>
+    <DefaultSection>
+      <h2 className="font-antonio text-10xl font-bold text-gray-900">Juun</h2>
+    </DefaultSection>
+    <DefaultSection>
       <p>
         Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
         delectus dolore inventore repellendus suscipit maiores veritatis
@@ -29,10 +32,7 @@ const Index = () => (
         atque fuga! Molestiae, sequi eos natus ex necessitatibus corrupti
         ratione.
       </p>
-    </DefaultPage>
-    <DefaultPage>
-      <p className="font-antonio text-10xl font-bold text-black">Juun</p>
-    </DefaultPage>
+    </DefaultSection>
   </Main>
 );
 

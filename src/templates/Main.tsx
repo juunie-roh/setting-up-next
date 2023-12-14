@@ -31,7 +31,7 @@ const Main = (props: IMainProps) => {
             </h1>
             <nav>
               {/* Active Links on Header Menu */}
-              <ul className="flex gap-2 lg:text-lg">
+              <ul className="flex gap-1 lg:gap-2 lg:text-lg">
                 {menuData.map((menu) => {
                   return (
                     <li
