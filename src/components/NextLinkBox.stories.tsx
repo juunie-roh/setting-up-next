@@ -7,7 +7,7 @@ const meta = {
   component: NextLinkBox,
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen',
+    layout: 'center',
   },
 } satisfies Meta<typeof NextLinkBox>;
 
