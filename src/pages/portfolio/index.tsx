@@ -1,5 +1,5 @@
-import { Meta } from '@/layouts/Meta';
-import { DefaultSection, Main } from '@/templates';
+import { DefaultSection, Meta } from '@/layouts';
+import { Main } from '@/templates';
 
 const Portfolio = () => {
   return (
