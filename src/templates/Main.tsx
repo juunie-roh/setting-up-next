@@ -13,8 +13,8 @@ type IMainProps = {
 };
 
 const menuData = [
-  { id: 'about', name: 'about', path: '/about' },
-  { id: 'item1', name: 'item1', path: '/item1' },
+  { id: 'about', name: 'About', path: '/about' },
+  { id: 'portfolio', name: 'Portfolio', path: '/portfolio' },
   { id: 'item2', name: 'item2', path: '/item2' },
 ];
 
