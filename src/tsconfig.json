@@ -35,7 +35,7 @@
     "isolatedModules": true,
     "incremental": true,
 
-    "baseUrl": ".",
+    "baseUrl": "..",
     "plugins": [
       {
         "name": "next"
