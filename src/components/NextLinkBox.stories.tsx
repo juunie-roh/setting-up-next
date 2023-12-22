@@ -3,11 +3,11 @@ import type { Meta, StoryObj } from '@storybook/react';
 import { NextLinkBox } from './NextLinkBox';
 
 const meta = {
-  title: 'Example/NextLinkBox',
+  title: 'Example/components/NextLinkBox',
   component: NextLinkBox,
   tags: ['autodocs'],
   parameters: {
-    layout: 'fullscreen',
+    layout: 'center',
   },
 } satisfies Meta<typeof NextLinkBox>;
 

@@ -13,8 +13,8 @@ type IMainProps = {
 };
 
 const menuData = [
-  { id: 'about', name: 'about', path: '/about' },
-  { id: 'item1', name: 'item1', path: '/item1' },
+  { id: 'about', name: 'About', path: '/about' },
+  { id: 'portfolio', name: 'Portfolio', path: '/portfolio' },
   { id: 'item2', name: 'item2', path: '/item2' },
 ];
 
@@ -27,9 +27,9 @@ const Main = (props: IMainProps) => {
       {props.meta}
 
       <div className="mx-auto">
-        <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:px-12 lg:py-8">
+        <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl lg:px-12 lg:py-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit">
           <div className="flex items-baseline gap-4">
-            <h1 className="font-antonio text-2xl font-bold text-gray-900 dark:text-gray-100 lg:text-3xl">
+            <h1 className="font-antonio text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100">
               <Link href="/">{AppConfig.title}</Link>
             </h1>
             <nav>
@@ -83,7 +83,7 @@ const Main = (props: IMainProps) => {
             onClose={setMobileMenuOpen}
           >
             <div className="fixed inset-0 z-10">
-              <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto from-zinc-200 px-8 py-4 backdrop-blur-xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
+              <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto from-zinc-200 px-8 py-4 backdrop-blur-xl sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit">
                 <div className="flex items-center justify-between">
                   <h1 className="font-antonio text-2xl font-bold text-gray-900 dark:text-gray-100">
                     <Link href="/">{AppConfig.title}</Link>
@@ -138,7 +138,7 @@ const Main = (props: IMainProps) => {
           {props.children}
         </main>
 
-        <footer className="border-t border-gray-300 py-6 text-center text-sm dark:border-neutral-800 lg:py-8 lg:text-base">
+        <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base dark:border-neutral-800">
           © Copyright {new Date().getFullYear()} {AppConfig.title}. Made
           by&nbsp;
           <a
