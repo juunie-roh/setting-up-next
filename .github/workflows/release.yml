@@ -7,7 +7,7 @@ on:
       - completed
     branches:
       - main
-      
+
 permissions:
   contents: write
   issues: write
@@ -30,7 +30,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - run: HUSKY=0 yarn --frozen-lockfile
+      - run: HUSKY=0 yarn --immutable
 
       - name: Release
         env:
