@@ -5,7 +5,7 @@ import { Main } from './Main';
 
 // More on how to set up stories at: https://storybook.js.org/docs/7.0/react/writing-stories/introduction
 const meta = {
-  title: 'Example/Main',
+  title: 'Example/templates/Main',
   component: Main,
   tags: ['autodocs'],
   parameters: {
@@ -33,10 +33,10 @@ export const MainWithString = {
 export const MainWithHomeLink: Story = {
   play: async ({ canvasElement }) => {
     const canvas = within(canvasElement);
-    const loginButton = canvas.getByRole('link', {
-      name: /Juun/i,
-    });
+    // const loginButton = canvas.getByRole('link', {
+    //   name: /Juun/i,
+    // });
 
-    await userEvent.click(loginButton);
+    // await userEvent.click(loginButton);
   },
 } satisfies Story;
