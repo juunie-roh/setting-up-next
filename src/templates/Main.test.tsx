@@ -17,7 +17,7 @@ describe('Main template', () => {
 
       const copyrightSection = screen.getByText(/© Copyright/);
       const copyrightLink = within(copyrightSection).getByRole('link');
-      expect(copyrightLink).toHaveAttribute(
+      expect(copyrightLink).toHaveProperty(
         'href',
         'https://github.com/juunie-roh/setting-up-next',
       );

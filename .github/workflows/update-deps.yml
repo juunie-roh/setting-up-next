@@ -23,7 +23,7 @@ jobs:
           cache: "yarn"
       - run: yarn --immutable
 
-      - run: yarn upgrade --latest
+      - run: yarn up
       - run: rm -Rf node_modules yarn-lock.json
       - run: yarn
       - name: Create Pull Request
