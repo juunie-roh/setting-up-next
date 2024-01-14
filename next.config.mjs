@@ -16,7 +16,7 @@ export default bundleAnalyzer({
   rewrites: async () => [
     {
       source: '/public/100days/index.html',
-      destination: '/pages/portfolio/api/100days.ts',
+      destination: '/api/100days.ts',
     },
   ],
   webpack: (config) => {
@@ -27,6 +27,11 @@ export default bundleAnalyzer({
       bufferutil: 'bufferutil',
       'utf-8-validate': 'utf-8-validate',
     });
+    // needed to resolve an error: Module not found: Can't resolve 'fs'
+    // eslint-disable-next-line no-param-reassign
+    config.resolve.fallback = {
+      fs: false,
+    };
 
     return config;
   },
