@@ -13,6 +13,12 @@ export default bundleAnalyzer({
   },
   poweredByHeader: false,
   reactStrictMode: true,
+  rewrites: async () => [
+    {
+      source: '/public/100days/index.html',
+      destination: '/pages/portfolio/api/100days.ts',
+    },
+  ],
   webpack: (config) => {
     // config.externals is needed to resolve the following errors:
     // Module not found: Can't resolve 'bufferutil'
