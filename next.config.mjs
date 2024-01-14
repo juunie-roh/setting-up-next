@@ -16,7 +16,7 @@ export default bundleAnalyzer({
   rewrites: async () => [
     {
       source: '/public/100days/index.html',
-      destination: '/pages/portfolio/api/100days.ts',
+      destination: '/api/100days.ts',
     },
   ],
   webpack: (config) => {
