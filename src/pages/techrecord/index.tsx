@@ -12,9 +12,9 @@ type IMenuData = {
 
 const menuDatas: Array<IMenuData> = [
   {
-    title: 'Render .html in NextJS',
-    href: '#',
-    ctgry: 'NextJS > Config',
+    title: 'Three.js Example on React',
+    href: '/techrecord/three-example',
+    ctgry: 'ThreeJS',
     key: 1,
   },
 ];
