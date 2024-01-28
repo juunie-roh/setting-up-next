@@ -26,7 +26,7 @@ const Main = (props: IMainProps) => {
     <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
       {props.meta}
 
-      <div className="flex flex-col justify-between mx-auto min-h-screen">
+      <div className="mx-auto flex min-h-screen flex-col justify-between">
         <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl lg:px-12 lg:py-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit">
           <div className="flex items-baseline gap-4">
             <h1 className="font-antonio text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100">
@@ -139,8 +139,7 @@ const Main = (props: IMainProps) => {
         </main>
 
         <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base dark:border-neutral-800">
-          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made
-          by{' '}
+          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made by{' '}
           <a
             href="https://github.com/juunie-roh/setting-up-next"
             className="font-semibold"

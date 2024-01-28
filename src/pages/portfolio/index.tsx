@@ -27,7 +27,10 @@ const Portfolio = () => {
         <ul>
           {menuDatas.map((menu) => {
             return (
-              <li key={menu.key} className="text-xl text-gray-900 dark:text-gray-100">
+              <li
+                key={menu.key}
+                className="text-xl text-gray-900 dark:text-gray-100"
+              >
                 <Link href={menu.href}>{menu.title}</Link>
               </li>
             );

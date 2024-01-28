@@ -35,7 +35,7 @@ const TechRecord = () => {
           {menuDatas.map((menu) => {
             return (
               <li key={menu.key} className="text-gray-900 dark:text-gray-100">
-                <span className="text-sm mr-2">{menu.ctgry}</span>
+                <span className="mr-2 text-sm">{menu.ctgry}</span>
                 <Link className="text-xl" href={menu.href}>
                   {menu.title}
                 </Link>
