@@ -5,8 +5,8 @@ const Index = () => (
   <Main
     meta={
       <Meta
-        title="Juun's Next.js Boilerplate"
-        description="Next js Boilerplate Settings"
+        title="Juun"
+        description="Personal web site Based on NextJS Boilerplate by ixaan"
       />
     }
   >

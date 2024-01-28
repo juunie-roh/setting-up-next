@@ -15,7 +15,7 @@ type IMainProps = {
 const menuData = [
   { id: 'about', name: 'About', path: '/about' },
   { id: 'portfolio', name: 'Portfolio', path: '/portfolio' },
-  { id: 'item2', name: 'item2', path: '/item2' },
+  { id: 'techrecord', name: 'Tech Record', path: '/techrecord' },
 ];
 
 const Main = (props: IMainProps) => {
@@ -26,7 +26,7 @@ const Main = (props: IMainProps) => {
     <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
       {props.meta}
 
-      <div className="mx-auto">
+      <div className="mx-auto flex min-h-screen flex-col justify-between">
         <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl lg:px-12 lg:py-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit">
           <div className="flex items-baseline gap-4">
             <h1 className="font-antonio text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100">
@@ -134,13 +134,12 @@ const Main = (props: IMainProps) => {
             </div>
           </Dialog>
         </header>
-        <main className="flex min-h-screen flex-col p-8 pt-32 lg:p-12 lg:pt-48">
+        <main className="flex flex-col p-8 pt-32 lg:p-12 lg:pt-48">
           {props.children}
         </main>
 
         <footer className="border-t border-gray-300 py-6 text-center text-sm lg:py-8 lg:text-base dark:border-neutral-800">
-          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made
-          by&nbsp;
+          © Copyright {new Date().getFullYear()} {AppConfig.title}. Made by{' '}
           <a
             href="https://github.com/juunie-roh/setting-up-next"
             className="font-semibold"

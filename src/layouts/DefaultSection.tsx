@@ -6,7 +6,7 @@ type IDefaultPageProps = {
 
 const DefaultSection = (props: IDefaultPageProps) => {
   return (
-    <div className="flex w-full flex-col items-center justify-between pb-8 lg:pb-12">
+    <div className="flex w-full flex-col items-center justify-between">
       {props.children}
     </div>
   );

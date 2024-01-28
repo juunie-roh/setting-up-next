@@ -49,7 +49,7 @@ const About = () => (
           priority
         />
       </div>
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
+      <div className="my-8 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
         {linkBoxData.map((data) => {
           return (
             <NextLinkBox
@@ -62,6 +62,7 @@ const About = () => (
         })}
       </div>
     </DefaultSection>
+
     <DefaultSection>
       <ul className="list-disc text-gray-600">
         <li className="-ml-5 mb-3 list-none border-b border-gray-300 text-lg text-neutral-800 dark:border-neutral-800 dark:text-gray-300">
