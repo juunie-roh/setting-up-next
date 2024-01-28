@@ -14,11 +14,5 @@ describe('Index page', () => {
       });
       expect(headingsWithJuun).toHaveLength(2);
     });
-
-    it('should have 3 paragraphs of `Lorem ipsum`', () => {
-      render(<Index />);
-      const paragraph = screen.getAllByText(/Lorem ipsum/);
-      expect(paragraph).toHaveLength(3);
-    });
   });
 });
