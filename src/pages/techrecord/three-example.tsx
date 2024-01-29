@@ -1,7 +1,7 @@
 import { Canvas } from '@react-three/fiber';
 
 import { ThreeSimpleBox } from '@/components';
-import { Meta } from '@/layouts';
+import { Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
 
 const ThreeExample = () => {
@@ -14,7 +14,7 @@ const ThreeExample = () => {
         />
       }
     >
-      <div style={{ width: '100%', height: '60vh' }}>
+      <ThreeCanvas>
         <Canvas>
           <ambientLight intensity={Math.PI / 2} />
           <spotLight
@@ -32,7 +32,7 @@ const ThreeExample = () => {
           <ThreeSimpleBox position={[-1.2, 0, 0]} />
           <ThreeSimpleBox position={[1.2, 0, 0]} />
         </Canvas>
-      </div>
+      </ThreeCanvas>
     </Main>
   );
 };
