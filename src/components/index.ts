@@ -1,4 +1,5 @@
 import { NextLinkBox } from './NextLinkBox';
 import { ThreeSimpleBox } from './ThreeJS/ThreeSimpleBox';
+import { ThreeGLTFLoader } from './ThreeJS/GLTFLoaderExample';
 
-export { NextLinkBox, ThreeSimpleBox };
+export { NextLinkBox, ThreeSimpleBox, ThreeGLTFLoader };

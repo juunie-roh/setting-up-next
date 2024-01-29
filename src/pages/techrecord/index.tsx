@@ -17,6 +17,12 @@ const menuDatas: Array<IMenuData> = [
     ctgry: 'ThreeJS',
     key: 1,
   },
+  {
+    title: 'GLTF Loader Example on React',
+    href: '/techrecord/gltf-loader-example',
+    ctgry: 'ThreeJS',
+    key: 2,
+  },
 ];
 
 const TechRecord = () => {

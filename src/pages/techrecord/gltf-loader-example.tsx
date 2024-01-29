@@ -1,16 +1,17 @@
+import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 
-import { ThreeSimpleBox } from '@/components';
+import { ThreeGLTFLoader } from '@/components';
 import { Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
 
-const ThreeExample = () => {
+const GLTFLoaderExample = () => {
   return (
     <Main
       meta={
         <Meta
-          title="Three.js Example"
-          description="Running Three.js on Next, React environment example."
+          title="GLTF Loader Example"
+          description="Loading GLTF Models Example on React-Next JS"
         />
       }
     >
@@ -29,12 +30,12 @@ const ThreeExample = () => {
             decay={0}
             intensity={Math.PI}
           />
-          <ThreeSimpleBox position={[-1.2, 0, 0]} />
-          <ThreeSimpleBox position={[1.2, 0, 0]} />
+          <ThreeGLTFLoader />
+          <OrbitControls />
         </Canvas>
       </ThreeCanvas>
     </Main>
   );
 };
 
-export default ThreeExample;
+export default GLTFLoaderExample;
