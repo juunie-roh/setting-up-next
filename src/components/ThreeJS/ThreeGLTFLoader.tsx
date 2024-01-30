@@ -32,17 +32,19 @@ const ThreeGLTFLoader = (props: IThreeGLTFLoaderProps) => {
   };
 
   return (
-    <primitive
-      object={gltf.scene}
+    <mesh
+      rotation={[0, Math.PI / 2, 0]}
       onClick={() => handleOnClick()}
-      onPointerOver={(e: React.PointerEvent) => {
+      onPointerOver={(e) => {
         e.stopPropagation();
         setIsHovered(true);
       }}
       onPointerOut={() => setIsHovered(false)}
       castShadow
       receiveShadow
-    />
+    >
+      <primitive object={gltf.scene} />
+    </mesh>
   );
 };
 

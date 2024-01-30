@@ -18,7 +18,7 @@ const GLTFLoaderExample = () => {
       }
     >
       <ThreeCanvas>
-        <Canvas>
+        <Canvas camera={{ position: [30, 20, 30] }}>
           <ambientLight intensity={Math.PI / 2} />
           <spotLight
             position={[10, 10, 10]}
