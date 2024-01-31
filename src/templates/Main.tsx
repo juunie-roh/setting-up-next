@@ -134,7 +134,7 @@ const Main = (props: IMainProps) => {
             </div>
           </Dialog>
         </header>
-        <main className="flex flex-col p-8 pt-32 lg:p-12 lg:pt-48">
+        <main className="flex flex-col p-8 pt-24 lg:p-12 lg:pt-32">
           {props.children}
         </main>
 
