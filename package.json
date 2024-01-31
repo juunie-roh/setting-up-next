@@ -96,6 +96,17 @@
       "path": "@commitlint/cz-commitlint"
     }
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": [
+      "yarn format",
+      "git add"
+    ]
+  },
   "release": {
     "branches": [
       "main"
