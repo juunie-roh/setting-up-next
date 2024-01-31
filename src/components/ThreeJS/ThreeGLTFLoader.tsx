@@ -1,4 +1,5 @@
 import { useLoader } from '@react-three/fiber';
+import { useState } from 'react';
 import { Mesh, MeshStandardMaterial } from 'three';
 import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
 
@@ -12,10 +13,7 @@ type IThreeGLTFLoaderProps = {
  */
 const ThreeGLTFLoader = (props: IThreeGLTFLoaderProps) => {
   const gltf = useLoader(GLTFLoader, props.modelPath);
-
-  const handleOnClick = () => {
-    console.log('model clicked');
-  };
+  const [active, setActive] = useState<boolean>(false);
 
   const setIsHovered = (isHovered: boolean) => {
     if (gltf.scene) {
@@ -34,12 +32,13 @@ const ThreeGLTFLoader = (props: IThreeGLTFLoaderProps) => {
   return (
     <mesh
       rotation={[0, Math.PI / 2, 0]}
-      onClick={() => handleOnClick()}
+      onClick={() => setActive(!active)}
       onPointerOver={(e) => {
         e.stopPropagation();
         setIsHovered(true);
       }}
       onPointerOut={() => setIsHovered(false)}
+      scale={active ? 1.5 : 1.0}
       castShadow
       receiveShadow
     >

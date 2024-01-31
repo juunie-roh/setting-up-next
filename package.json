@@ -8,6 +8,7 @@
     "start": "next start",
     "clean": "rimraf .next .swc out coverage",
     "lint": "next lint ./src",
+    "lint-staged": "yarn format && git add .",
     "format": "next lint ./src --fix && prettier '**/*.{json,yaml,yml}' --write --ignore-path .gitignore",
     "check-types": "tsc --noEmit --pretty",
     "test": "jest",
@@ -94,6 +95,11 @@
   "config": {
     "commitizen": {
       "path": "@commitlint/cz-commitlint"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   },
   "release": {
