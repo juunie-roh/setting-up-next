@@ -28,7 +28,7 @@ jobs:
 
       - if: github.event_name == 'pull_request'
         name: Validate all commits from PR
-        run: yarn commitlint --from ${{ github.event.pull_request.base.sha }} --to ${{ github.event.pull_request.head.sha }} --verbose
+        run: yarn commitlint --edit ${{ github.event.pull_request.base.sha }} .. ${{ github.event.pull_request.head.sha }} --verbose
 
       - name: esLinter
         run: yarn lint
