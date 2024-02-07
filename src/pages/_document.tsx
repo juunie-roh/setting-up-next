@@ -9,6 +9,10 @@ class MyDocument extends Document {
     return (
       <Html lang={AppConfig.locale}>
         <Head>
+          <meta
+            name="google-site-verification"
+            content="DSWX9T0ryTPX662pi_ffZ-CXOJglx8olV7olIsOHfBg"
+          />
           <link rel="preconnect" href="https://fonts.googleapis.com" />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
