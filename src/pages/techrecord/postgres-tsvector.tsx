@@ -8,7 +8,7 @@ const PostgresTsvector = () => {
       meta={
         <Meta
           title="PostgreSQL, How to Search Using tsvector"
-          description="Search Function Using tsvector in PostgreSQL"
+          description="Search Function Using tsvector in PostgreSQL. PostgreSQL에서 tsvector로 검색하는 방법."
         />
       }
     >
@@ -49,8 +49,30 @@ const PostgresTsvector = () => {
             <br />t
           </CodeBox>
           <p className="mb-4">
-            위 코드의 Full Text Search 결과는 true/false 형태로 반환된다.
-            해당하는 연산자가 @@ 이다.
+            위 코드의 Full Text Search 결과는 true/false 형태로 반환된다.{' '}
+            <code>WHERE</code> 절에 포함시켜서 검색 결과를 받아올 수 있다.
+            <br />
+            <code>tsvector</code>에 대해 text search 쿼리를 실행하도록 하는
+            연산자가 <code>@@</code>이다.
+          </p>
+          <p className="mb-4">
+            <b>CAUTION</b>: <br />
+            <code>to_tsquery</code>나 <code>::tsquery</code>를 사용하면 변환
+            대상에 whitespace가 포함됐을 때 제대로 작동하지 않을 수 있다. 위의
+            예제에서는 원래 <code>to_tsquery</code>로 변환되는 형태인{' '}
+            <code>{`'text' & 'text'`}</code> 형태여서 가능했던 것. 특수문자,
+            공백 등이 포함된 문자열을 변환해주는 <code>plainto_tsquery</code>를
+            사용하자.
+          </p>
+          <p className="mb-4">
+            추가로 사용할 수 있는 tsquery 변환 함수는 다음과 같다. <br />
+            <code>phraseto_tsquery</code>: 입력받은 단어 순서대로 검색하고 싶을
+            때 사용한다. <code>&</code> 대신 <code>{`<->`}</code> 연산자가
+            들어간다.
+            <br />
+            <code>websearch_to_tsquery</code>: 웹 검색창에서 사용되는{' '}
+            <code>{`"`}</code>나 <code>or</code>, <code>-</code> 등을 인식해서
+            변환한다.
           </p>
         </div>
       </DefaultSection>
