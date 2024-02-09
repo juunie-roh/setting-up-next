@@ -1618,7 +1618,7 @@ __metadata:
   peerDependencies:
     commitizen: ^4.0.3
     inquirer: ^8.0.0
-  checksum: 10c0/e17d4c52c4b6f7193705e3eac1ccc857986d1a966384dbdbf8a94216a61b40d81785c32819e9171596ea8f18c93f0421a5a0685242e37984f797ab47b3fa7188
+  checksum: 10c0/a365e4f35ca885ec2bb8c14566a6a30948500efb8f6c6673ceabf196e7d99508446a6795fadfec213c1c1f31b779e40911e051bd3d53da72f3f5b05728e05a3a
   languageName: node
   linkType: hard
 
