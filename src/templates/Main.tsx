@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { type ReactNode, useState } from 'react';
 
+import { antonio } from '@/styles/fonts';
 import { AppConfig } from '@/utils/AppConfig';
 
 type IMainProps = {
@@ -29,7 +30,9 @@ const Main = (props: IMainProps) => {
       <div className="mx-auto flex min-h-screen flex-col justify-between">
         <header className="fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl lg:px-12 lg:py-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit">
           <div className="flex items-baseline gap-4">
-            <h1 className="font-antonio text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100">
+            <h1
+              className={`${antonio.className} text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100`}
+            >
               <Link href="/">{AppConfig.title}</Link>
             </h1>
             <nav>

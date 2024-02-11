@@ -1,4 +1,5 @@
 import { DefaultSection, Meta } from '@/layouts';
+import { antonio } from '@/styles/fonts';
 import { Main } from '@/templates';
 
 const Index = () => (
@@ -11,7 +12,9 @@ const Index = () => (
     }
   >
     <DefaultSection>
-      <h2 className="font-antonio text-10xl font-bold text-gray-900 dark:text-gray-100">
+      <h2
+        className={`${antonio.className} text-10xl font-bold text-gray-900 dark:text-gray-100`}
+      >
         Juun
       </h2>
     </DefaultSection>
