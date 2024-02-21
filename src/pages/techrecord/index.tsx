@@ -23,12 +23,6 @@ const menuDatas: Array<IMenuData> = [
     ctgry: 'ThreeJS',
     key: 2,
   },
-  {
-    title: 'PostgreSQL, How to Search Using tsvector',
-    href: '/techrecord/postgres-tsvector',
-    ctgry: 'Data Base',
-    key: 3,
-  },
 ];
 
 const TechRecord = () => {
