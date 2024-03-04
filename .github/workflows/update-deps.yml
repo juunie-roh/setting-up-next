@@ -24,7 +24,7 @@ jobs:
       - run: yarn --immutable
 
       - run: yarn up
-      - run: rm yarn-lock.json
+      - run: rm yarn.lock
       - run: yarn cache clean
       - run: yarn
       - name: Create Pull Request
