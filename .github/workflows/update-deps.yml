@@ -26,7 +26,7 @@ jobs:
       - run: yarn up
       - run: rm yarn.lock
       - run: yarn cache clean
-      - run: yarn
+      - run: yarn install
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v4
         with:
