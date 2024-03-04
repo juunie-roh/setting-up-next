@@ -38,12 +38,12 @@
     "baseUrl": ".",
     "plugins": [
       {
-        "name": "next",
-      },
+        "name": "next"
+      }
     ],
     "paths": {
-      "@/*": ["./src/*"],
-    },
+      "@/*": ["./src/*"]
+    }
   },
   "exclude": ["./out/**/*", "./node_modules/**/*"],
   "include": [
@@ -51,6 +51,6 @@
     "**/*.ts",
     "**/*.tsx",
     ".next/types/**/*.ts",
-    ".storybook/*.ts",
-  ],
+    ".storybook/*.ts"
+  ]
 }

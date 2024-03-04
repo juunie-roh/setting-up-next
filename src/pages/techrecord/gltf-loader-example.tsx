@@ -1,5 +1,6 @@
 import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
+import { Suspense } from 'react';
 
 import { ThreeGLTFLoader } from '@/components';
 import { DefaultSection, Meta, ThreeCanvas } from '@/layouts';
@@ -32,7 +33,9 @@ const GLTFLoaderExample = () => {
             decay={0}
             intensity={Math.PI}
           />
-          <ThreeGLTFLoader modelPath={path} />
+          <Suspense>
+            <ThreeGLTFLoader modelPath={path} />
+          </Suspense>
           <OrbitControls />
         </Canvas>
       </ThreeCanvas>

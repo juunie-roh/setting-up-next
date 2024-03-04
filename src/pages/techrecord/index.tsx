@@ -23,6 +23,12 @@ const menuDatas: Array<IMenuData> = [
     ctgry: 'ThreeJS',
     key: 2,
   },
+  {
+    title: 'Water Effect Example',
+    href: '/techrecord/water-example',
+    ctgry: 'ThreeJS',
+    key: 3,
+  },
 ];
 
 const TechRecord = () => {
