@@ -50,7 +50,8 @@ const WaterExample = () => {
       </ThreeCanvas>
       <DefaultSection>
         <p className="mt-4">
-          Box Material 정상적으로 출력되지 않는 문제 발생, 원인 아직 모르겠음.
+          Box Material 정상적으로 출력되지 않는 문제 발생: Sun 에 해당하는 Light
+          이 없음.
         </p>
       </DefaultSection>
     </Main>
