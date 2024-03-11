@@ -29,6 +29,12 @@ const menuDatas: Array<IMenuData> = [
     ctgry: 'ThreeJS',
     key: 3,
   },
+  {
+    title: 'Rapier Example',
+    href: '/techrecord/rapier-example',
+    ctgry: 'ThreeJS',
+    key: 4,
+  },
 ];
 
 const TechRecord = () => {

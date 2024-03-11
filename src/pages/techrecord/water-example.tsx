@@ -3,7 +3,7 @@ import { Canvas, useFrame } from '@react-three/fiber';
 import { Suspense, useRef } from 'react';
 import type { Mesh } from 'three';
 
-import Ocean from '@/components/ThreeJS/Ocean';
+import { Ocean } from '@/components';
 import { DefaultSection, Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
 
