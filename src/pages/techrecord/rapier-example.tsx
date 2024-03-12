@@ -3,6 +3,7 @@ import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
 import { Suspense, useMemo } from 'react';
 
+// eslint-disable-next-line import/no-cycle
 import { Rapier } from '@/components';
 import { Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
