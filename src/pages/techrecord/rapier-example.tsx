@@ -3,7 +3,6 @@ import { Canvas } from '@react-three/fiber';
 import { Physics } from '@react-three/rapier';
 import { Suspense, useMemo } from 'react';
 
-// eslint-disable-next-line import/no-cycle
 import { Rapier } from '@/components';
 import { Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
@@ -23,7 +22,7 @@ const RapierExample = () => {
       { name: Controls.back, keys: ['ArrowDown', 'KeyS'] },
       { name: Controls.left, keys: ['ArrowLeft', 'KeyA'] },
       { name: Controls.right, keys: ['ArrowRight', 'KeyD'] },
-      { name: Controls.forward, keys: ['Space'] },
+      { name: Controls.jump, keys: ['Space'] },
     ],
     [],
   );
@@ -43,7 +42,7 @@ const RapierExample = () => {
             <color attach="background" args={['#ececec']} />
             <Suspense>
               <Physics debug>
-                <Rapier />
+                <Rapier Controls={Controls} />
               </Physics>
             </Suspense>
           </Canvas>

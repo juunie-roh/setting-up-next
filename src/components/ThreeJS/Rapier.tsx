@@ -4,10 +4,17 @@ import { quat, type RapierRigidBody, RigidBody } from '@react-three/rapier';
 import React, { useRef, useState } from 'react';
 import { Quaternion, Vector3 } from 'three';
 
-// eslint-disable-next-line import/no-cycle
-import { Controls } from '@/pages/techrecord/rapier-example';
+type IRapierProps = {
+  Controls: {
+    forward: string;
+    back: string;
+    left: string;
+    right: string;
+    jump: string;
+  };
+};
 
-const Rapier = () => {
+const Rapier = (props: IRapierProps) => {
   const [hover, setHover] = useState(false);
   const [start, setStart] = useState(false);
   const cube = useRef<RapierRigidBody>(null!);
@@ -16,24 +23,24 @@ const Rapier = () => {
 
   const jump = () => {
     if (isOnFloor.current) {
-      cube.current.applyImpulse({ x: 0, y: 5, z: 0 }, true);
+      cube.current.applyImpulse({ x: 0, y: 5, z: 0 }, false);
     }
   };
 
   const jumpPressed = useKeyboardControls(
-    (state) => state[Controls.jump] as boolean,
+    (state) => state[props.Controls.jump] as boolean,
   );
   const leftPressed = useKeyboardControls(
-    (state) => state[Controls.left] as boolean,
+    (state) => state[props.Controls.left] as boolean,
   );
   const rightPressed = useKeyboardControls(
-    (state) => state[Controls.right] as boolean,
+    (state) => state[props.Controls.right] as boolean,
   );
   const backPressed = useKeyboardControls(
-    (state) => state[Controls.back] as boolean,
+    (state) => state[props.Controls.back] as boolean,
   );
   const forwardPressed = useKeyboardControls(
-    (state) => state[Controls.forward] as boolean,
+    (state) => state[props.Controls.forward] as boolean,
   );
 
   const handleMovement = () => {
