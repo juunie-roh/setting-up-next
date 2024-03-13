@@ -35,6 +35,12 @@ const menuDatas: Array<IMenuData> = [
     ctgry: 'ThreeJS',
     key: 4,
   },
+  {
+    title: 'react-three/cannon example',
+    href: '/techrecord/react-three-cannon',
+    ctgry: 'ThreeJS',
+    key: 5,
+  },
 ];
 
 const TechRecord = () => {
