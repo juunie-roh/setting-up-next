@@ -39,18 +39,13 @@ Built-in feature from Next.js:
 
 ## Getting Started
 
-**Note**: This project is using `yarn` as a package manager.
+> **Note**: This project is using `yarn` as a package manager.
+> Also, implemented PnP(Plug n Play), Zero-install.
 
 First, run the development server:
 
 ```bash
-npm run dev
-# or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
