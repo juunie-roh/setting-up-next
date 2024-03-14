@@ -14,37 +14,37 @@ const menuDatas: Array<IMenuData> = [
   {
     title: 'Three.js Example on React',
     href: '/techrecord/three-example',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three-fiber',
     key: 1,
   },
   {
     title: 'GLTF Loader Example on React',
     href: '/techrecord/gltf-loader-example',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three-drei',
     key: 2,
   },
   {
     title: 'Water Effect Example',
     href: '/techrecord/water-example',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three-drei',
     key: 3,
   },
   {
     title: 'Rapier Example',
     href: '/techrecord/rapier-example',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three/rapier',
     key: 4,
   },
   {
     title: 'react-three/cannon Example',
     href: '/techrecord/react-three-cannon',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three/cannon',
     key: 5,
   },
   {
     title: 'react-three/cannon Raycast Vehicle',
     href: 'techrecord/cannon-raycast-vehicle',
-    ctgry: 'ThreeJS',
+    ctgry: 'react-three/cannon',
     key: 6,
   },
 ];
