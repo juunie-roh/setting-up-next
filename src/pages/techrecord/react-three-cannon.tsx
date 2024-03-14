@@ -13,11 +13,12 @@ import {
   useCylinder,
   usePlane,
   useSphere,
+  useTrimesh,
 } from '@react-three/cannon';
 import { Canvas } from '@react-three/fiber';
 import { useControls } from 'leva';
 import { useMemo, useRef } from 'react';
-import { IcosahedronGeometry, type Mesh } from 'three';
+import { IcosahedronGeometry, type Mesh, TorusKnotGeometry } from 'three';
 
 import { Meta, ThreeCanvas } from '@/layouts';
 import { Main } from '@/templates';
@@ -97,6 +98,25 @@ const Icosahedron = (props: ConvexPolyhedronProps) => {
   );
 };
 
+const TorusKnot = (props: any) => {
+  const geometry = useMemo(() => new TorusKnotGeometry(), []);
+  const [ref, api] = useTrimesh(
+    () => ({
+      args: [geometry.attributes.position?.array, geometry.index?.array],
+      mass: 1,
+      ...props,
+    }),
+    useRef<Mesh>(null!),
+  );
+
+  return (
+    <mesh ref={ref} castShadow onPointerDown={() => api.velocity.set(0, 5, 0)}>
+      <torusKnotGeometry />
+      <meshNormalMaterial />
+    </mesh>
+  );
+};
+
 const ReactThreeCannon = () => {
   const gravity = useControls('Gravity', {
     x: { value: 0, min: -10, max: 10, step: 0.1 },
@@ -136,6 +156,7 @@ const ReactThreeCannon = () => {
               <Sphere position={[-2, 3, 0]} />
               <Cylinder position={[0, 3, 0]} />
               <Icosahedron position={[4, 3, 0]} />
+              <TorusKnot position={[4, 3, 0]} />
             </Debug>
           </Physics>
         </Canvas>

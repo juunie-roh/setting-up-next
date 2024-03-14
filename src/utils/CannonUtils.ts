@@ -1,6 +1,13 @@
 import type { ConvexPolyhedronArgs } from '@react-three/cannon';
 import { type BufferAttribute, type BufferGeometry, Vector3 } from 'three';
 
+interface Face3 {
+  a: number;
+  b: number;
+  c: number;
+  normals: Vector3[];
+}
+
 class CannonUtils {
   public static toTrimeshProps(geometry: BufferGeometry) {
     let vertices;
@@ -24,7 +31,7 @@ class CannonUtils {
       vertices.push(new Vector3().fromBufferAttribute(position, 1));
     }
 
-    const faces = [];
+    const faces: Face3[] = [];
     for (let i = 0; i < position.count; i += 3) {
       const vertexNormals =
         normal === undefined
@@ -34,7 +41,7 @@ class CannonUtils {
               new Vector3().fromBufferAttribute(normal, i + 1),
               new Vector3().fromBufferAttribute(normal, i + 2),
             ];
-      const face = { a: i, b: i + 1, c: i + 2, normals: vertexNormals };
+      const face: Face3 = { a: i, b: i + 1, c: i + 2, normals: vertexNormals };
       faces.push(face);
     }
 
@@ -43,9 +50,7 @@ class CannonUtils {
     const changes: number[] = [];
     for (let i = 0, il = vertices.length; i < il; i += 1) {
       const v = vertices[i]!;
-      const key = `${Math.round(v.x * 100)}_${Math.round(
-        v.y * 100,
-      )}_${Math.round(v.z * 100)}`;
+      const key = `${Math.round(v.x * 100)}_${Math.round(v.y * 100)}_${Math.round(v.z * 100)}`;
       if (verticesMap[key] === undefined) {
         verticesMap[key] = i;
         points.push({

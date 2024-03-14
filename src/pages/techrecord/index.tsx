@@ -36,10 +36,16 @@ const menuDatas: Array<IMenuData> = [
     key: 4,
   },
   {
-    title: 'react-three/cannon example',
+    title: 'react-three/cannon Example',
     href: '/techrecord/react-three-cannon',
     ctgry: 'ThreeJS',
     key: 5,
+  },
+  {
+    title: 'react-three/cannon Raycast Vehicle',
+    href: 'techrecord/cannon-raycast-vehicle',
+    ctgry: 'ThreeJS',
+    key: 6,
   },
 ];
 
