@@ -108,7 +108,7 @@ const CannonRaycastVehicle = () => {
       </ThreeCanvas>
       <DefaultSection>
         <p>
-          * WASD to drive, SPACE to brake
+          * WASD or Arrow Keys to drive, SPACE to brake
           <br />r to reset
         </p>
       </DefaultSection>
