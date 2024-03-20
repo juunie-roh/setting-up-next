@@ -71,7 +71,7 @@ export default function Header() {
         <div className="fixed inset-0 z-10">
           <Dialog.Panel className={styles.panel}>
             <div className="flex items-center justify-between">
-              <h1 className={styles.panelTitle}>
+              <h1 className={`${antonio.className} ${styles.panelTitle}`}>
                 <Link href="/">{AppConfig.title}</Link>
               </h1>
               <button
@@ -92,6 +92,7 @@ export default function Header() {
                         href={menu.path}
                         className={styles.panelItem}
                         key={menu.id}
+                        onClick={() => setIsOpen(false)}
                       >
                         {menu.name}
                       </Link>

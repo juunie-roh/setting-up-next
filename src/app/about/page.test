@@ -1,0 +1,13 @@
+import { render, screen } from '@testing-library/react';
+
+import AboutPage from './page';
+
+describe('About Page', () => {
+  describe('Render method', () => {
+    it('should have 4 link boxes', () => {
+      render(<AboutPage />);
+      const boxes = screen.getAllByText('->');
+      expect(boxes).toHaveLength(4);
+    });
+  });
+});
