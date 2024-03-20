@@ -1,3 +1,5 @@
+'use client';
+
 import { useLoader } from '@react-three/fiber';
 import { useState } from 'react';
 import { Mesh, MeshStandardMaterial } from 'three';

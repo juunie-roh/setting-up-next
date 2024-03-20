@@ -28,7 +28,7 @@ class CannonUtils {
     const normal = geometry.attributes.normal as BufferAttribute;
     const vertices: Vector3[] = [];
     for (let i = 0; i < position.count; i += 1) {
-      vertices.push(new Vector3().fromBufferAttribute(position, 1));
+      vertices.push(new Vector3().fromBufferAttribute(position, i));
     }
 
     const faces: Face3[] = [];

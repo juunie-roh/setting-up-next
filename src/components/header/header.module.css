@@ -1,0 +1,35 @@
+.header {
+  @apply fixed left-0 top-0 z-10 flex w-full items-center justify-between border-b border-gray-300 bg-gradient-to-b from-zinc-200 px-8 py-4 backdrop-blur-xl lg:px-12 lg:py-8 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit;
+}
+
+.header_wrap {
+  @apply flex items-baseline gap-4;
+}
+
+.title {
+  @apply text-2xl font-bold text-gray-900 lg:text-3xl dark:text-gray-100;
+}
+
+.listItemOn {
+  @apply text-gray-900 underline underline-offset-2 dark:text-gray-100;
+}
+
+.listItemOff {
+  @apply text-gray-700 dark:text-gray-400;
+}
+
+.listItem {
+  @apply inline-block rounded-lg px-2 hover:bg-gray-400 hover:text-gray-900 dark:hover:bg-neutral-800 dark:hover:text-gray-100;
+}
+
+.vercel {
+  @apply pointer-events-auto hidden place-items-center gap-2 p-0 sm:flex lg:p-2 lg:text-lg;
+}
+
+.panel {
+  @apply fixed inset-y-0 right-0 z-10 w-full overflow-y-auto from-zinc-200 px-8 py-4 backdrop-blur-xl sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit;
+}
+
+.panelItem {
+  @apply -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100;
+}

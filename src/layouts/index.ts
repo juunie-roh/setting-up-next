@@ -1,5 +1,4 @@
-import { DefaultSection } from './DefaultSection';
-import { Meta } from './Meta';
+import { DefaultLayout } from './DefaultLayout';
 import { ThreeCanvas } from './ThreeCanvas';
 
-export { DefaultSection, Meta, ThreeCanvas };
+export { DefaultLayout, ThreeCanvas };
