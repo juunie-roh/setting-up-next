@@ -6,6 +6,19 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --color333: #333;
+  --color555: #555;
+  --color777: #777;
+  --color999: #999;
+  --mainColor: #623ad6;
+  --errorColor: #f96464;
+  --ongolingColor: #00b19c;
+  --holdColor: #514474;
+  --whiteColor: #fff;
+  --fontBold: bold;
+  --fontMedium: normal;
+  --bgGray: #faf9f9;
+  --bgEee: #eee;
 }
 
 @media (prefers-color-scheme: dark) {

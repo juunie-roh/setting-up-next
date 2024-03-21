@@ -1,0 +1,139 @@
+.footer {
+  background: var(--bgGray);
+}
+
+.container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.brochure {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: -10px;
+}
+.brochure li {
+  margin: 10px 10px 10px 0;
+}
+.brochure li a {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+
+  color: #555;
+  font-size: 13px;
+  font-weight: 700;
+  line-height: 20px;
+  border-radius: 35px;
+  background: var(--bgEee);
+}
+
+.address {
+  margin: 10px auto;
+}
+.address li {
+  color: #777;
+  font-size: 13px;
+  line-height: 20px;
+}
+.address li:first-child {
+  margin-top: 0;
+}
+.address li p {
+  display: inline-block;
+  margin-right: 6px;
+}
+.address li b {
+  font-weight: 700;
+  margin-right: 3px;
+}
+
+.social {
+  display: flex;
+  justify-content: flex-start;
+}
+.social li {
+  margin-right: 10px;
+}
+.social a {
+  display: block;
+  width: 30px;
+  height: 30px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  font-size: 0;
+}
+
+.terms {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  margin-top: 30px;
+}
+.terms li {
+  margin-right: 10px;
+  color: #777;
+  font-size: 13px;
+  line-height: 20px;
+}
+.copyright {
+  font-family: roboto;
+}
+
+.siteMap {
+  display: flex;
+  justify-content: space-between;
+}
+.siteMap li {
+  margin-left: 10px;
+  min-width: 130px;
+}
+.siteMap li ol li {
+  margin-top: 14px;
+  color: #555;
+  font-size: 14px;
+  line-height: 21px;
+}
+.siteMap li ol li:hover a {
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+.siteMap li ol li:first-child {
+  margin-top: 0;
+  cursor: default;
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    max-width: unset;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container__inner {
+    justify-content: flex-start;
+    padding: 20px 50px;
+  }
+  .siteMap {
+    display: none;
+  }
+  .address li p {
+    display: block;
+    margin: 5px 0;
+  }
+  .social li {
+    margin-right: 30px;
+    margin-top: 15px;
+  }
+  .terms {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    padding: 20px;
+  }
+}

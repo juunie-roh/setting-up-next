@@ -36,9 +36,9 @@ export default function WaterExample() {
           <pointLight position={[-100, -100, -100]} />
           <Suspense fallback={null}>
             <Ocean />
-            <Box />
+            <Sky sunPosition={[500, 150, -1000]} turbidity={0.1} />
           </Suspense>
-          <Sky sunPosition={[500, 150, -1000]} turbidity={0.1} />
+          <Box />
           <OrbitControls />
         </Canvas>
       </ThreeCanvas>

@@ -30,6 +30,10 @@
   @apply fixed inset-y-0 right-0 z-10 w-full overflow-y-auto from-zinc-200 px-8 py-4 backdrop-blur-xl sm:max-w-sm sm:ring-1 sm:ring-gray-900/10 dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit;
 }
 
+.panelTitle {
+  @apply text-2xl font-bold text-gray-900 dark:text-gray-100;
+}
+
 .panelItem {
   @apply -mx-3 block rounded-lg px-3 py-2 text-base font-semibold leading-7 text-gray-900 dark:text-gray-100;
 }
