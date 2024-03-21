@@ -16,7 +16,7 @@ export default function Header() {
           <div className={styles.img} />
           <p>🎁 8주년 신규고객 이벤트!</p>
           <div className={styles.icon}>
-            <ChevronRightIcon />
+            <ChevronRightIcon strokeWidth={2} />
           </div>
         </div>
       </Link>

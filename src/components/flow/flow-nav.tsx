@@ -8,8 +8,8 @@ import { useState } from 'react';
 import { useAuthDispatch, useAuthState } from '@/contexts/AuthContextProvider';
 import type { LnbSubLiProps } from '@/types/props';
 
+import { Li } from './components';
 import styles from './flow-nav.module.css';
-import Li from './ProductLnbSubLi';
 
 const productLnbSubLis: Array<LnbSubLiProps> = [
   {
@@ -113,7 +113,7 @@ export default function Nav({
   return (
     <nav className={styles.lnbWrap}>
       <h1>
-        <Link href="/portfolio/flow">
+        <Link scroll={false} href="/portfolio/flow">
           <Image
             src="/images/flow/logo.svg"
             alt="Flow Logo"

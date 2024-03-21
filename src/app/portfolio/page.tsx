@@ -33,7 +33,9 @@ export default function PortfolioPage() {
                 key={menu.key}
                 className="text-xl text-gray-900 dark:text-gray-100"
               >
-                <Link href={menu.href}>{menu.title}</Link>
+                <Link href={menu.href} scroll={false}>
+                  {menu.title}
+                </Link>
               </li>
             );
           })}

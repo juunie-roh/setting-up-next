@@ -1,0 +1,267 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 830px;
+  overflow: hidden;
+  background: #f6f4fc;
+}
+
+.inner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 85px 100px;
+}
+
+.titleBox {
+  position: relative;
+  z-index: 3;
+}
+.titleBox p {
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 33px;
+}
+.titleBox h2,
+.titleBox span {
+  margin-bottom: 40px;
+  font-size: 50px;
+  line-height: 1.4em;
+  font-weight: 700;
+}
+.titleBox a {
+  position: relative;
+  display: inline-block;
+  width: 230px;
+  padding: 16px 37px;
+  background-color: var(--mainColor);
+  border-radius: 50px;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.titleBox a:hover {
+  background-color: var(--holdColor);
+  text-decoration: underline;
+}
+.titleBox a svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  display: inline-block;
+}
+
+.imageBox {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  width: 60%;
+  height: 100%;
+}
+.imageBox #main_obj {
+  position: absolute;
+  right: -60px;
+  top: 50px;
+  width: 830px;
+  height: 830px;
+}
+.imageBox #main_obj i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/flow/main-obj.png) no-repeat center center / contain;
+  transform-origin: 50% 50%;
+  animation: main_obj 10s linear infinite;
+}
+
+#main_obj span {
+  position: absolute;
+  margin-left: 3px;
+  padding: 7px 10px;
+  border-radius: 18px;
+  box-shadow: 13px 14px 22px rgb(0 0 0 / 15%);
+  z-index: 2;
+
+  color: #fff;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+}
+#main_obj #request {
+  left: -20px;
+  top: 260px;
+  background-color: #27b5f2;
+}
+#main_obj #progress {
+  left: 100px;
+  bottom: 100px;
+  background-color: #32c31b;
+}
+#main_obj #feedback {
+  left: 100px;
+  top: 100px;
+  background-color: #fc8536;
+}
+
+.imageBox #sub_obj {
+  position: absolute;
+  right: 24px;
+  top: 140px;
+  width: 650px;
+  height: 650px;
+}
+.imageBox #sub_obj i {
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background: url(/images/flow/sub-obj.svg) no-repeat center center / contain;
+  animation: sub_obj 10s linear infinite;
+}
+.imageBox #pj_web {
+  position: absolute;
+  right: -90px;
+  top: 233px;
+  display: inline-block;
+  width: 714px;
+  height: 450px;
+  border-radius: 20px;
+  box-shadow: -80px 80px 80px rgb(0 0 0 / 25%);
+  background: url(/images/flow/pj-web.svg) no-repeat;
+  background-size: cover;
+  z-index: 2;
+}
+
+@keyframes main_obj {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: 360deg;
+  }
+}
+@keyframes sub_obj {
+  from {
+    rotate: 0deg;
+  }
+  to {
+    rotate: -360deg;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .container {
+    height: 880px;
+    overflow: hidden;
+  }
+  .inner {
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+    padding: 0 200px;
+    margin: 0 auto;
+  }
+  .titleBox h2,
+  .titleBox span {
+    font-size: 70px;
+  }
+  .imageBox {
+    right: -30px;
+    top: -30px;
+  }
+  .imageBox #main_obj {
+    right: 210px;
+    top: -85px;
+  }
+  .imageBox #main_obj i {
+    width: 1085px;
+    height: 1085px;
+  }
+  #main_obj #request {
+    left: -40px;
+    top: 405px;
+  }
+  #main_obj #progress {
+    left: 120px;
+    top: 905px;
+    bottom: unset;
+  }
+  #main_obj #feedback {
+    left: 120px;
+    top: 125px;
+  }
+  .imageBox #sub_obj {
+    right: 265px;
+    top: 25px;
+  }
+  .imageBox #sub_obj i {
+    width: 856px;
+    height: 856px;
+  }
+  .imageBox #pj-web {
+    width: 1000px;
+    height: 587px;
+    right: -168px;
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    margin-top: 100px;
+    height: 660px;
+  }
+  .inner {
+    padding: 40px 50px;
+  }
+  .titleBox p {
+    font-size: 18px;
+  }
+  .titleBox h2,
+  .titleBox span {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  .titleBox a {
+    width: 200px;
+    font-size: 16px;
+  }
+  .imageBox {
+    right: -26px;
+    top: 220px;
+  }
+  .imageBox #main_obj {
+    right: -374px;
+    top: 0px;
+  }
+  .imageBox #main_obj i {
+    width: 416px;
+    height: 416px;
+  }
+  #main_obj #request,
+  #main_obj #progress,
+  #main_obj #feedback {
+    display: none;
+  }
+  .imageBox #sub_obj {
+    right: -240px;
+    top: 44px;
+  }
+  .imageBox #sub_obj i {
+    width: 328px;
+    height: 328px;
+  }
+  .imageBox #pj-web {
+    width: 320px;
+    height: 360px;
+    right: 33px;
+    top: 100px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 40px 20px;
+  }
+}

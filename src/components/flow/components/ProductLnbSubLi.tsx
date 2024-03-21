@@ -6,9 +6,15 @@ import type { LnbSubLiProps } from '@/types/props';
 export default function Li({ to, src, title, sub_title }: LnbSubLiProps) {
   return (
     <li>
-      <Link href={to}>
-        <strong>
-          <Image src={src} alt="" width={19} height={19} />
+      <Link scroll={false} href={to}>
+        <strong className="relative">
+          <Image
+            src={src}
+            alt=""
+            width={19}
+            height={19}
+            className="object-contain"
+          />
           {title}
         </strong>
         <p>
