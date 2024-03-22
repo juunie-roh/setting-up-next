@@ -25,8 +25,7 @@ export default function Functions() {
             </ul>
           </div>
           <p>
-            메일, 채팅, 문서 중심의 방식에서 벗어나
-            <br />
+            메일, 채팅, 문서 중심의 방식에서 벗어나 <br />
             온라인 협업 방식으로 프로젝트 소통을 강화할 수 있습니다.
           </p>
           <div className={styles.slideProgress}>

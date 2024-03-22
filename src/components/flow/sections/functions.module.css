@@ -38,7 +38,7 @@
 }
 @media screen and (max-width: 1024px) {
   .container {
-    height: 1086px;
+    height: 936px;
     padding-top: 80px;
     background-position: 50% bottom;
   }
@@ -188,9 +188,9 @@
   .slideFunc p br {
     display: none;
   }
-  .slideFunc div {
+  /* .slideFunc div {
     display: none;
-  }
+  } */
   .slideFunc a {
     font-size: 12px;
   }
