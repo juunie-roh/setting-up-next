@@ -1,0 +1,166 @@
+.container {
+  width: 100%;
+  padding: 100px 0;
+  background: #fff;
+}
+.container h2 {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.saas,
+.onPremise {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 15px;
+  box-shadow: 70px 70px 80px rgb(0 0 0 / 8%);
+  margin-bottom: 40px;
+}
+.saas .title,
+.onPremise .title {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-indent: 1em;
+  padding: 1em;
+}
+.saas .title {
+  background: #5cbb52;
+}
+.onPremise .title {
+  background: #3aafe1;
+}
+
+.saas i,
+.onPremise i {
+  position: absolute;
+  right: 30px;
+  top: 20px;
+  width: 100px;
+  height: 100px;
+  z-index: 2;
+}
+.saas i {
+  background: url(/images/flow/icon/icon-rental.svg) no-repeat center center /
+    cover;
+}
+.onPremise i {
+  background: url(/images/flow/icon/icon-install.svg) no-repeat center center /
+    cover;
+}
+
+.saas .content,
+.onPremise .content {
+  padding: 30px;
+}
+.saas .content ul li,
+.onPremise .content ul li {
+  margin-bottom: 0.5em;
+  font-weight: 500;
+  color: #777;
+}
+.saas .content ul li::before {
+  background: url(/images/flow/icon/icon-check8.svg) no-repeat center center /
+    contain;
+}
+.onPremise .content ul li::before {
+  background: url(/images/flow/icon/icon-check4.png) no-repeat center center /
+    contain;
+}
+.saas .content ul li:last-child {
+  font-size: 14px;
+  font-weight: 400;
+  color: #aaa;
+  margin: 2em 0;
+}
+.saas .content ul li:last-child::before {
+  display: none;
+}
+.saas .content a,
+.onPremise .content a {
+  display: inline-block;
+  padding: 1em 2em;
+  border-radius: 2em;
+  color: #fff;
+  font-size: 14px;
+  line-height: 2em;
+  font-weight: 700;
+}
+.saas .content a svg,
+.onPremise .content a svg {
+  display: inline-block;
+  color: #fff;
+  width: auto;
+  height: 14px;
+  stroke-width: 3;
+  text-indent: 0.5em;
+}
+.saas .content a {
+  background: #5cbb52;
+}
+.onPremise .content a {
+  margin-top: 40px;
+  background: #3aafe1;
+}
+.saas .content a:hover,
+.onPremise .content a:hover {
+  text-decoration: underline;
+}
+.saas .content a:hover {
+  background: #34692e;
+}
+.onPremise .content a:hover {
+  background: #246e8e;
+}
+
+@media screen and (min-width: 1441px) {
+  .container .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .saas,
+  .onPremise {
+    width: 47.5%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container h2 {
+    margin-bottom: 30px;
+  }
+  .saas,
+  .onPremise {
+    margin-bottom: 20px;
+    border-radius: 10px;
+  }
+  .saas .title,
+  .onPremise .title {
+    font-size: 16px;
+  }
+  .saas i,
+  .onPremise i {
+    width: 70px;
+    height: 70px;
+    right: 20px;
+  }
+  .saas .content,
+  .onPremise .content {
+    padding: 20px;
+  }
+  .saas .content ul li,
+  .onPremise .content ul li {
+    font-size: 14px;
+  }
+  .saas .content ul li:last-child {
+    margin: 1em 0;
+  }
+  .saas .content a,
+  .onPremise .content a {
+    padding: 0.5em 2em;
+  }
+  .onPremise .content a {
+    margin-top: 20px;
+  }
+}

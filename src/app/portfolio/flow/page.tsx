@@ -6,6 +6,7 @@ import {
   MainBanner,
   Management,
   Partner,
+  Service,
 } from '@/components/flow/sections';
 
 export const metadata: Metadata = {
@@ -20,6 +21,7 @@ export default function Page() {
       <Functions />
       <Management />
       <Example />
+      <Service />
       MIGRATION TESTING
     </>
   );
