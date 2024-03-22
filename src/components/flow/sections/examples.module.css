@@ -1,0 +1,97 @@
+.inner {
+  display: block;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  padding: 80px 0;
+  background: #f6f4fc;
+}
+
+.container img {
+  display: block;
+  margin: 0 auto;
+}
+.container img:last-child {
+  display: none;
+}
+.container h2 {
+  margin-bottom: 30px;
+}
+.container p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+.container a {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+  z-index: 1;
+}
+.container a::before {
+  content: '';
+  position: absolute;
+  left: 1.5em;
+  top: -0.5em;
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  background-color: #d9d2ed;
+  z-index: -1;
+
+  transition-duration: 0.3s;
+}
+.container a:hover::before {
+  transform: translateX(-0.75em) scale(0.6);
+  background-color: #02b6a0;
+}
+.container a i::before {
+  content: '';
+  position: relative;
+  top: -0.1em;
+  display: inline-block;
+  width: 2.5em;
+  height: 0.6em;
+  background: url(/images/flow/icon/arrow-long.svg) no-repeat center center /
+    contain;
+}
+
+@media screen and (min-width: 1441px) {
+  .inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    padding: 40px 0 94px;
+  }
+  .container img {
+    width: 100%;
+    height: auto;
+  }
+  .container img:first-child {
+    display: none;
+  }
+  .container img:last-child {
+    display: block;
+  }
+  .container h2 {
+    margin-bottom: 20px;
+  }
+  .container p {
+    font-size: 16px;
+  }
+  .container p br {
+    display: none;
+  }
+  .container a {
+    font-size: 16px;
+  }
+}
