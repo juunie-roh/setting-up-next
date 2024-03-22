@@ -16,7 +16,7 @@ export default function Example() {
             height={600}
           />
           <Image
-            src="/images/flow/main/main-team-mb.png"
+            src="/images/flow/main/main-team.svg"
             alt="team image for mobile"
             width={0}
             height={0}
