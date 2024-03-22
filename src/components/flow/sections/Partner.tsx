@@ -1,7 +1,7 @@
 import Image from 'next/image';
 
 import common from '../common.module.css';
-import styles from './Partner.module.css';
+import styles from './partner.module.css';
 
 const Images = (start: number, end: number) => {
   const arr = [];

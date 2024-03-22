@@ -1,0 +1,211 @@
+.container {
+  width: 100%;
+  height: 678px;
+  padding-top: 100px;
+  overflow: hidden;
+  background: #f6f4fc;
+  background-image: url(/images/flow/main/main-function1.png);
+  background-repeat: no-repeat;
+  background-size: 700px auto;
+  background-position: 80% bottom;
+}
+.container h2 {
+  position: relative;
+  margin-bottom: 30px;
+  z-index: 2;
+}
+.container img {
+  position: absolute;
+  right: 42%;
+  top: 0;
+  display: inline-block;
+  z-index: 0;
+}
+@media screen and (min-width: 1441px) {
+  .container {
+    height: 950px;
+    padding-top: 0;
+    background-size: 1000px 820px;
+    background-position: bottom right;
+  }
+  .container h2 {
+    margin-bottom: 1.4em;
+  }
+
+  .inner {
+    padding: 200px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 1086px;
+    padding-top: 80px;
+    background-position: 50% bottom;
+  }
+  .container h2 {
+    margin-bottom: 20px;
+  }
+  .container img {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    height: 720px;
+    background-size: 320px 360px !important;
+  }
+}
+
+.slideFunc {
+  position: relative;
+  z-index: 1;
+}
+
+.slideFunc ul {
+  display: flex;
+  width: auto;
+  min-width: 475px;
+  margin-bottom: 40px;
+}
+.slideFunc ul li {
+  padding: 16px 30px;
+  margin-left: 10px;
+  background: #fff;
+  border-radius: 30px;
+  box-shadow: 20px 0 40px rgb(0 0 0 / 15%);
+  cursor: pointer;
+
+  color: #777;
+  font-size: 16px;
+  font-weight: 700;
+}
+.slideFunc ul li.li_active {
+  background: var(--mainColor);
+  color: #fff;
+}
+.slideFunc ul li:first-child {
+  margin-left: 0;
+}
+.slideFunc ul li:hover {
+  background: var(--mainColor);
+
+  color: #fff;
+  text-decoration: underline;
+}
+.slideFunc p {
+  font-size: 18px;
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+.listWrap {
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+}
+
+.slideProgress {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 24%;
+  margin-bottom: 60px;
+}
+.slideProgress p {
+  font-size: 14px;
+  font-weight: 900;
+}
+.slideProgress a {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+.slideProgress a::before {
+  content: '';
+  position: absolute;
+  left: 1.5em;
+  top: -0.5em;
+  display: block;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  background-color: #d9d2ed;
+  z-index: -1;
+  transition-duration: 0.3s;
+}
+.slideProgress a:hover::before {
+  content: '';
+  position: relative;
+  top: -0.1em;
+  display: inline-block;
+  width: 2.5em;
+  height: 0.6em;
+  background: url(/images/flow/icon/arrow-long.svg) no-repeat center center /
+    contain;
+}
+
+#progressbar {
+  position: relative;
+  width: 80%;
+  height: 1px;
+  background: #ddd;
+}
+#progressbar .prgs_active::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: #333;
+  transform-origin: left center;
+  transform: scaleX(0);
+  animation: slideProgress 5000ms linear;
+}
+
+@keyframes slideProgress {
+  from {
+    transform: scaleX(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .slideFunc ul {
+    margin-bottom: 20px;
+  }
+  .slideFunc ul li {
+    padding: 9px 18px;
+    box-shadow: none;
+    font-size: 12px;
+  }
+  .slideFunc p {
+    font-size: 16px;
+  }
+  .slideFunc p br {
+    display: none;
+  }
+  .slideFunc div {
+    display: none;
+  }
+  .slideFunc a {
+    font-size: 12px;
+  }
+
+  .slideProgress {
+    display: none;
+  }
+}
+@media screen and (max-width: 768px) {
+  .listWrap {
+    overflow-x: scroll;
+  }
+
+  #slideList {
+    min-width: 460px;
+    overflow-x: scroll;
+  }
+}

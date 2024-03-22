@@ -1,4 +1,5 @@
-import MainBanner from './MainBanner';
-import Partner from './Partner';
+import Functions from './funtions';
+import MainBanner from './mainbanner';
+import Partner from './partner';
 
-export { MainBanner, Partner };
+export { Functions, MainBanner, Partner };

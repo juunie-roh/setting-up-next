@@ -1,6 +1,6 @@
 import { ChevronRightIcon } from '@heroicons/react/24/outline';
 
-import styles from './MainBanner.module.css';
+import styles from './mainbanner.module.css';
 
 export default function MainBanner() {
   return (
