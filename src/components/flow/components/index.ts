@@ -1,3 +1,4 @@
+import MngmtLi from './ManagementLi';
 import Li from './ProductLnbSubLi';
 
-export { Li };
+export { Li, MngmtLi };
