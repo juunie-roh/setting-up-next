@@ -29,15 +29,15 @@
 #partnerLeft {
   top: 0;
   left: 0;
-  animation: partnerLeft 30s linear infinite;
+  animation: flowLeft 30s linear infinite;
 }
 #partnerRight {
   top: 110px;
-  right: 0;
-  animation: partnerRight 30s linear infinite;
+  left: 0;
+  animation: flowRight 30s linear infinite;
 }
 
-@keyframes partnerLeft {
+@keyframes flowLeft {
   from {
     left: 0;
   }
@@ -45,7 +45,7 @@
     left: -100%;
   }
 }
-@keyframes partnerRight {
+@keyframes flowRight {
   from {
     left: -100%;
   }
