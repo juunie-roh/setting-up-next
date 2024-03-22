@@ -1,0 +1,79 @@
+.inner {
+  position: relative;
+  padding: 0 100px;
+}
+
+@media screen and (min-width: 1441px) {
+  .inner {
+    padding: 0 200px;
+    max-width: 1920px;
+    margin: auto;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .inner {
+    padding: 0 50px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .inner {
+    padding: 0 20px;
+  }
+}
+
+.title {
+  font-size: 40px;
+  line-height: 1.4em;
+  font-weight: 600;
+}
+@media screen and (min-width: 1441px) {
+  .title {
+    font-size: 50px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .title {
+    font-size: 24px;
+  }
+}
+
+.activeLink {
+  position: relative;
+  font-size: 20px;
+  font-weight: 700;
+}
+.activeLink::before {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 1.5em;
+  top: -0.5em;
+  z-index: -1;
+  width: 2.5em;
+  height: 2.5em;
+  border-radius: 100%;
+  background-color: #d9d2ed;
+
+  transition-duration: 0.3s;
+}
+.activeLink:hover::before {
+  transform: translateX(-0.75em) scale(0.6);
+  background-color: #02b6a0;
+}
+.activeLink i::before {
+  content: '';
+  display: inline-block;
+  position: relative;
+  top: -0.1em;
+  width: 2.5em;
+  height: 0.6em;
+  background: url(/images/flow/icon/arrow-long.svg) no-repeat center center /
+    contain;
+}
+@media screen and (max-width: 1024px) {
+  .activeLink {
+    font-size: 12px;
+  }
+}
