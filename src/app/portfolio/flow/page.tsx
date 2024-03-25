@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
 import {
+  Business,
   Example,
   Functions,
   Guide,
@@ -9,6 +10,7 @@ import {
   Partner,
   Service,
 } from '@/components/flow/sections';
+import Input from '@/components/flow/sections/input';
 
 export const metadata: Metadata = {
   title: 'Flow KR',
@@ -24,7 +26,8 @@ export default function Page() {
       <Example />
       <Service />
       <Guide />
-      MIGRATION TESTING
+      <Input />
+      <Business />
     </>
   );
 }

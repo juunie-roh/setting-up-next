@@ -1,0 +1,140 @@
+.container {
+  position: relative;
+  width: 100%;
+  height: 400px !important;
+  padding: 76px 0;
+  background: url(/images/flow/bottom-banner-bg.jpg) no-repeat center center /
+    cover;
+}
+.inner {
+  text-align: center;
+}
+
+.text {
+  width: 100% !important;
+}
+.text p {
+  font-size: 28px !important;
+  font-weight: 700;
+  margin: 30px 0 !important;
+  color: #fff;
+  line-height: 40px !important;
+}
+.text ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: -20px 0 25px;
+}
+.text ul li {
+  padding-left: 20px;
+  background: url(/images/flow/icon/icon-check11.svg) no-repeat 0 9px;
+  color: #fff;
+  font-size: 18px;
+  line-height: 27px;
+}
+.text ul li:last-child {
+  margin-left: 20px;
+}
+.text a {
+  position: relative;
+  display: inline-block;
+  width: 245px;
+  height: 63px;
+  margin-top: 0 !important;
+  padding: 0 37px;
+  background: #fff;
+  border: 2px solid #fff !important;
+  border-radius: 900px;
+  color: #333;
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 3;
+}
+.text a svg {
+  position: absolute;
+  right: 24px;
+  top: 1em;
+  width: 1em;
+  height: 1em;
+  color: #333;
+}
+
+.symbols {
+  display: flex;
+  justify-content: space-between;
+  width: 160px;
+  margin: 0 auto;
+}
+.symbols i {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background: #3aafe1;
+  border-radius: 50%;
+  animation: symbols 1.7s ease-in-out infinite;
+}
+.symbols i:nth-child(2) {
+  background: #5cbb52;
+  animation-delay: 180ms;
+}
+.symbols i:nth-child(3) {
+  background: #f28539;
+  animation-delay: 360ms;
+}
+.symbols i:nth-child(4) {
+  background: #302b3c;
+  animation-delay: 540ms;
+}
+.symbols i:nth-child(5) {
+  background: #999;
+  animation-delay: 720ms;
+}
+@keyframes symbols {
+  from,
+  to {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.5);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .container {
+    height: 320px !important;
+    padding: 85px 0 !important;
+  }
+  .symbols {
+    width: 98px;
+  }
+  .symbols i {
+    width: 10px;
+    height: 10px;
+  }
+  .text p {
+    font-size: 18px !important;
+  }
+  .text ul li {
+    padding-left: 13px;
+    font-size: 12px;
+    line-height: 18px;
+    background-position: 0 5px;
+    background-size: 10px 7px;
+  }
+  .text ul li:last-child {
+    margin-left: 14px;
+  }
+  .text a {
+    width: 197px;
+    height: 53px;
+    padding: 0 30px;
+    font-size: 16px;
+  }
+  .text a svg {
+    right: 21px;
+    top: 1em;
+    width: 1em;
+    height: 1em;
+  }
+}

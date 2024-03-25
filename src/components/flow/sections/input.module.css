@@ -1,0 +1,137 @@
+.container {
+  width: 100%;
+  padding: 100px 0;
+  background: #f6f4fc;
+}
+@media screen and (min-width: 1441px) {
+  .inner {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+.miniText {
+  position: relative;
+}
+.miniText::before {
+  content: '';
+  position: relative;
+  top: 0.1em;
+  display: inline-block;
+  width: 0.2em;
+  height: 0.2em;
+  margin: 0.4em;
+  background: var(--color555);
+}
+.image {
+  display: block;
+  margin: 10px auto;
+}
+
+.formList label {
+  display: none;
+}
+#submitBtn,
+.formList input,
+.formList select {
+  display: block;
+  width: 600px;
+  padding: 1em;
+  margin: 1em auto;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+}
+.formList input {
+  color: var(--mainColor);
+}
+.formList input::placeholder {
+  color: var(--color999);
+}
+.formList input:focus,
+.formList select:focus {
+  outline: none;
+  border: 1px solid var(--color333);
+  box-shadow: 2px 2px 6px rgb(0 0 0 / 15%);
+}
+.formList select:hover {
+  cursor: pointer;
+}
+.agreeList input[type='checkbox'] {
+  display: none;
+}
+.agreeList li {
+  display: flex;
+  justify-content: space-between;
+  width: 600px;
+  margin: 1em auto;
+}
+.agreeList label {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 2em;
+  font-weight: 500;
+}
+.agreeList label span,
+.agreeList label a {
+  font-weight: 500;
+}
+.agreeList label span {
+  color: var(--errorColor);
+  margin-right: 0.5em;
+}
+.agreeList label a {
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+.agreeList label::before {
+  content: '';
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  margin-right: 0.5em;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #fff;
+}
+.agreeList label:hover {
+  cursor: pointer;
+}
+.agreeList label:hover::before {
+  border-color: var(--mainColor);
+}
+.agreeList label.checked::before {
+  background: var(--mainColor);
+}
+#submitBtn {
+  background-color: var(--mainColor);
+  color: #fff;
+  font-weight: 500;
+}
+#submitBtn:hover {
+  cursor: pointer;
+  background-color: var(--holdColor);
+  text-decoration: underline;
+}
+@media screen and (max-width: 1024px) {
+  .image {
+    margin: 10px 0;
+  }
+  .formList input,
+  .formList select,
+  .agreeList li,
+  #submitBtn {
+    width: 100%;
+  }
+}
+@media screen and (max-width: 768px) {
+  .image {
+    max-width: 260px;
+  }
+  .formList input,
+  .formList select {
+    margin: 1.5em auto;
+    padding: 0.5em 1.5em;
+    font-size: 14px;
+  }
+}
