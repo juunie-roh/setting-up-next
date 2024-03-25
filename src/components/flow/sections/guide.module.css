@@ -1,0 +1,209 @@
+.container {
+  width: 100%;
+  padding-top: 100px;
+  background: #fff;
+}
+.container h2 {
+  margin-bottom: 50px;
+}
+@media screen and (max-width: 1024px) {
+  .container h2 {
+    margin-bottom: 30px;
+  }
+}
+
+.cardWrap {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  height: 1000px;
+  max-width: 640px;
+  overflow: visible;
+  margin: 0 auto;
+}
+@media screen and (min-width: 1441px) {
+  .cardWrap {
+    display: block;
+    max-width: none;
+    height: 600px;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .cardWrap {
+    max-width: 100%;
+    height: 340px;
+    overflow-x: scroll;
+  }
+}
+
+.cardWrap ul {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1024px) {
+  .cardWrap ul {
+    flex-wrap: nowrap;
+    min-width: 910px;
+    margin: 30px auto 0;
+    padding: 0 30px 60px;
+    overflow-x: scroll;
+  }
+}
+
+.card {
+  position: relative;
+  overflow: visible;
+  width: 50%;
+  height: 340px;
+  max-width: 250px;
+  z-index: 0;
+}
+.card a {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  border: 1px solid var(--bgEee);
+  border-radius: 4px;
+  box-shadow: 20px 20px 44px rgb(0 0 0 / 7%);
+  z-index: 2;
+
+  transition-property: border, box-shadow;
+  transition-duration: 0.3s;
+}
+.card:hover a {
+  border: 1px solid var(--mainColor);
+  box-shadow: 20px 20px 44px rgb(0 0 0 / 30%);
+}
+.card a p {
+  position: relative;
+  display: block;
+  padding: 16px 0 30px 16px;
+  font-size: 0;
+}
+.card a p::before {
+  content: '';
+  display: inline-block;
+  width: 27px;
+  height: 27px;
+  background: url(/images/flow/icon/flow-icon.svg) no-repeat center center /
+    contain;
+}
+.card a p span {
+  position: absolute;
+  right: 15px;
+  top: 15px;
+  display: inline-block;
+  width: 4px;
+  height: 38px;
+  background: url(/images/flow/icon/flow-symbol.svg) no-repeat;
+}
+.card a b {
+  display: block;
+  padding: 0 16px;
+
+  color: var(--color333);
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 41px;
+}
+.card:hover a b {
+  color: var(--mainColor);
+  text-decoration: underline;
+}
+.card a i {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  display: inline-block;
+  width: 190px;
+  height: 155px;
+}
+
+.card_bg {
+  content: '';
+  position: absolute;
+  right: -46px;
+  top: 106px;
+  display: inline-block;
+  width: 338px;
+  height: 324px;
+  background: #f5f4f9;
+  border-radius: 10px;
+  z-index: 1;
+
+  transition: background-color 0.3s;
+}
+.card:hover .card_bg {
+  background: var(--mainColor);
+}
+.card_bg span {
+  position: absolute;
+  left: 49px;
+  bottom: 36px;
+  color: #555;
+}
+.card:hover .card_bg span {
+  color: #fff;
+}
+
+.card1 a i {
+  background: url(/images/flow/flow/flow-check01.svg) no-repeat center center /
+    contain;
+}
+.card2 a i {
+  background: url(/images/flow/flow/flow-check02.svg) no-repeat center center /
+    contain;
+}
+.card3 a i {
+  background: url(/images/flow/flow/flow-check03.svg) no-repeat center center /
+    contain;
+}
+.card4 a i {
+  background: url(/images/flow/flow/flow-check04.svg) no-repeat center center /
+    contain;
+}
+
+@media screen and (max-width: 1024px) {
+  .card {
+    width: 150px;
+    height: 204px;
+  }
+  .card a p {
+    padding: 9px 0 20px 9px;
+  }
+  .card a p::before {
+    width: 15px;
+    height: 15px;
+  }
+  .card a p span {
+    right: 8px;
+    top: 9px;
+    width: 3px;
+    height: 23px;
+    background-size: contain;
+  }
+  .card a b {
+    font-size: 14px;
+    line-height: 21px;
+  }
+  .card a i {
+    width: 106px;
+    height: 88px;
+  }
+  .card_bg {
+    right: -28px;
+    top: 50px;
+    width: 210px;
+    height: 212px;
+  }
+  .card_bg span {
+    font-size: 14px;
+    left: 33px;
+    bottom: 26px;
+  }
+}

@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import {
   Example,
   Functions,
+  Guide,
   MainBanner,
   Management,
   Partner,
@@ -22,6 +23,7 @@ export default function Page() {
       <Management />
       <Example />
       <Service />
+      <Guide />
       MIGRATION TESTING
     </>
   );
