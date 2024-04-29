@@ -6,6 +6,8 @@ import React from 'react';
 import Footer from '@/components/footer/footer';
 import Header from '@/components/header/header';
 
+import StoreProvider from './StoreProvider';
+
 export const metadata: Metadata = {
   title: {
     template: '%s | Juun',
@@ -24,15 +26,17 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body>
-        <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
-          <div className="mx-auto flex min-h-screen flex-col justify-between">
-            <Header />
-            <main className="flex flex-col p-8 pt-24 lg:p-12 lg:pt-32">
-              {children}
-            </main>
-            <Footer />
+        <StoreProvider>
+          <div className="min-h-screen w-full px-1 text-gray-700 antialiased">
+            <div className="mx-auto flex min-h-screen flex-col justify-between">
+              <Header />
+              <main className="flex flex-col p-8 pt-24 lg:p-12 lg:pt-32">
+                {children}
+              </main>
+              <Footer />
+            </div>
           </div>
-        </div>
+        </StoreProvider>
       </body>
     </html>
   );

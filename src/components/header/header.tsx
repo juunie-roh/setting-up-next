@@ -5,8 +5,11 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
+import type { ComponentState } from 'react';
 import { useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
 
+import { decrement, increment } from '@/libs/counterSlice';
 import { antonio } from '@/styles/fonts';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -21,6 +24,8 @@ const menus = [
 export default function Header() {
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
+  const count = useSelector((state: ComponentState) => state.value);
+  const dispatch = useDispatch();
 
   return (
     <header className={styles.header}>
@@ -42,6 +47,15 @@ export default function Header() {
             })}
           </ul>
         </nav>
+      </div>
+      <div className={styles.redux}>
+        <button type="button" onClick={() => dispatch(decrement())}>
+          Decrease
+        </button>
+        <span>{count}</span>
+        <button type="button" onClick={() => dispatch(increment())}>
+          Increase
+        </button>
       </div>
       <Link
         className={styles.vercel}
