@@ -9,7 +9,7 @@ import type { ComponentState } from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 
-import { decrement, increment } from '@/libs/counterSlice';
+import { decrement, increment } from '@/features/counterSlice';
 import { antonio } from '@/styles/fonts';
 import { AppConfig } from '@/utils/AppConfig';
 
