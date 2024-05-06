@@ -3,7 +3,7 @@
 import React, { useRef } from 'react';
 import { Provider } from 'react-redux';
 
-import { type AppStore, store } from '@/libs/store';
+import { type AppStore, store } from '@/lib/store';
 
 export default function StoreProvider({
   children,
