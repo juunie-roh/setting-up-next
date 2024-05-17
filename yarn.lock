@@ -6028,6 +6028,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/redux@npm:^3.6.0":
+  version: 3.6.31
+  resolution: "@types/redux@npm:3.6.31"
+  checksum: 10c0/9b2aae62f170c39503f2e13830a167d00a3748310de72381030154529393f4dd514e53b8b895e944cce150e403c99e4dce171eea62af3009976b8219486d6969
+  languageName: node
+  linkType: hard
+
 "@types/resolve@npm:^1.20.2":
   version: 1.20.6
   resolution: "@types/resolve@npm:1.20.6"
@@ -7363,6 +7370,17 @@ __metadata:
   version: 4.7.0
   resolution: "axe-core@npm:4.7.0"
   checksum: 10c0/89ac5712b5932ac7d23398b4cb5ba081c394a086e343acc68ba49c83472706e18e0799804e8388c779dcdacc465377deb29f2714241d3fbb389cf3a6b275c9ba
+  languageName: node
+  linkType: hard
+
+"axios@npm:^1.6.8":
+  version: 1.6.8
+  resolution: "axios@npm:1.6.8"
+  dependencies:
+    follow-redirects: "npm:^1.15.6"
+    form-data: "npm:^4.0.0"
+    proxy-from-env: "npm:^1.1.0"
+  checksum: 10c0/0f22da6f490335479a89878bc7d5a1419484fbb437b564a80c34888fc36759ae4f56ea28d55a191695e5ed327f0bad56e7ff60fb6770c14d1be6501505d47ab9
   languageName: node
   linkType: hard
 
@@ -11374,6 +11392,16 @@ __metadata:
   version: 0.228.0
   resolution: "flow-parser@npm:0.228.0"
   checksum: 10c0/571e18b76f0523311b0654b6f749d6bdc73208e4ae12463c13c83e833de5d340e3e939898bfcd565e1e9d2877566f347021df6a1b177514adf0a57c86ec768a9
+  languageName: node
+  linkType: hard
+
+"follow-redirects@npm:^1.15.6":
+  version: 1.15.6
+  resolution: "follow-redirects@npm:1.15.6"
+  peerDependenciesMeta:
+    debug:
+      optional: true
+  checksum: 10c0/9ff767f0d7be6aa6870c82ac79cf0368cd73e01bbc00e9eb1c2a16fbb198ec105e3c9b6628bb98e9f3ac66fe29a957b9645bcb9a490bb7aa0d35f908b6b85071
   languageName: node
   linkType: hard
 
@@ -17409,7 +17437,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"proxy-from-env@npm:^1.0.0":
+"proxy-from-env@npm:^1.0.0, proxy-from-env@npm:^1.1.0":
   version: 1.1.0
   resolution: "proxy-from-env@npm:1.1.0"
   checksum: 10c0/fe7dd8b1bdbbbea18d1459107729c3e4a2243ca870d26d34c2c1bcd3e4425b7bcc5112362df2d93cc7fb9746f6142b5e272fd1cc5c86ddf8580175186f6ad42b
@@ -18839,11 +18867,13 @@ __metadata:
     "@types/node": "npm:^20.11.19"
     "@types/react": "npm:^18.2.57"
     "@types/react-dom": "npm:^18.2.19"
+    "@types/redux": "npm:^3.6.0"
     "@types/three": "npm:^0.161.2"
     "@typescript-eslint/eslint-plugin": "npm:^7.0.2"
     "@typescript-eslint/parser": "npm:^7.0.2"
     "@vercel/postgres": "npm:^0.7.2"
     autoprefixer: "npm:^10.4.17"
+    axios: "npm:^1.6.8"
     commitizen: "npm:^4.3.0"
     cssnano: "npm:^6.0.3"
     eslint: "npm:^8.56.0"

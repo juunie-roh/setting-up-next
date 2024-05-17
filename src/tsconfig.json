@@ -50,6 +50,7 @@
     "next-env.d.ts",
     "**/*.ts",
     "**/*.tsx",
+    "@type",
     ".next/types/**/*.ts",
     ".storybook/*.ts"
   ]
