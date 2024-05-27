@@ -1,11 +1,10 @@
 /* eslint-disable no-param-reassign */
 import { createSlice } from '@reduxjs/toolkit';
 
-import AsyncReducers from '@/libs/AsyncReducers';
-import AsyncThunk from '@/libs/AsyncThunk';
+import { AsyncReducers, AsyncThunk } from '@/libs/features/api';
 import type { AsyncState } from '@/libs/types';
 
-const initialState: AsyncState = {
+const initialState: AsyncState<any> = {
   data: null,
   status: 'fulfilled',
 };

@@ -5,11 +5,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import type { ComponentState } from 'react';
 import { useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
 
-import { decrement, increment } from '@/libs/features/counter/counterSlice';
+import { decrement, increment } from '@/libs/features';
+import { useAppDispatch, useAppSelector } from '@/libs/hooks';
 import { antonio } from '@/styles/fonts';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -24,8 +23,8 @@ const menus = [
 export default function Header() {
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const count = useSelector((state: ComponentState) => state.value);
-  const dispatch = useDispatch();
+  const count = useAppSelector((state) => state.counter.data);
+  const dispatch = useAppDispatch();
 
   return (
     <header className={styles.header}>
