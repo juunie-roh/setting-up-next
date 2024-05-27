@@ -27,21 +27,17 @@ const Box = () => {
 
 export default function WaterExample() {
   return (
-    <>
-      <ThreeCanvas>
-        <Canvas
-          camera={{ position: [0, 5, 100], fov: 55, near: 1, far: 20000 }}
-        >
-          <pointLight position={[100, 100, 100]} />
-          <pointLight position={[-100, -100, -100]} />
-          <Suspense fallback={null}>
-            <Ocean />
-            <Sky sunPosition={[500, 150, -1000]} turbidity={0.1} />
-          </Suspense>
-          <Box />
-          <OrbitControls />
-        </Canvas>
-      </ThreeCanvas>
-    </>
+    <ThreeCanvas>
+      <Canvas camera={{ position: [0, 5, 100], fov: 55, near: 1, far: 20000 }}>
+        <pointLight position={[100, 100, 100]} />
+        <pointLight position={[-100, -100, -100]} />
+        <Suspense fallback={null}>
+          <Ocean />
+          <Sky sunPosition={[500, 150, -1000]} turbidity={0.1} />
+        </Suspense>
+        <Box />
+        <OrbitControls />
+      </Canvas>
+    </ThreeCanvas>
   );
 }

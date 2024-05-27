@@ -1,7 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import catFactsReducer from '@/libs/features/catFacts/catFactsSlice';
-import counterReducer from '@/libs/features/counter/counterSlice';
+import { catFactsReducer, counterReducer } from '@/libs/features';
 
 export const makeStore = () => {
   return configureStore({

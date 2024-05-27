@@ -1,4 +1,4 @@
-export type AsyncState = {
-  data: any;
+export type AsyncState<D> = {
+  data: D;
   status: 'fulfilled' | 'pending' | 'rejected';
 };

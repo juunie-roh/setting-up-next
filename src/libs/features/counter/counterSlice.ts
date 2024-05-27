@@ -1,7 +1,10 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-const initialState = {
-  value: 0,
+import type { AsyncState } from '@/libs/types';
+
+const initialState: AsyncState<any> = {
+  data: 0,
+  status: 'fulfilled',
 };
 
 const counterSlice = createSlice({
@@ -10,14 +13,14 @@ const counterSlice = createSlice({
   reducers: {
     increment: (state) => {
       // eslint-disable-next-line no-param-reassign
-      state.value += 1;
+      state.data += 1;
     },
     decrement: (state) => {
       // eslint-disable-next-line no-param-reassign
-      state.value -= 1;
+      state.data -= 1;
     },
   },
 });
 
 export const { increment, decrement } = counterSlice.actions;
-export default counterSlice.reducer;
+export const counterReducer = counterSlice.reducer;

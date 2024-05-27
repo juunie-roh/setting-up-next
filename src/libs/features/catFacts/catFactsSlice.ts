@@ -22,4 +22,4 @@ const catFactsSlice = createSlice({
   extraReducers: (builder) => AsyncReducers.create(builder)(getCatFacts),
 });
 
-export default catFactsSlice.reducer;
+export const catFactsReducer = catFactsSlice.reducer;

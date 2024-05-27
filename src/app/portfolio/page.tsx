@@ -23,24 +23,22 @@ export const metadata: Metadata = {
 
 export default function PortfolioPage() {
   return (
-    <>
-      <DefaultLayout>
-        <h2 className="text-gray-900 dark:text-gray-100">Portfolios</h2>
-        <ul>
-          {menus.map((menu) => {
-            return (
-              <li
-                key={menu.key}
-                className="text-xl text-gray-900 dark:text-gray-100"
-              >
-                <Link href={menu.href} scroll={false}>
-                  {menu.title}
-                </Link>
-              </li>
-            );
-          })}
-        </ul>
-      </DefaultLayout>
-    </>
+    <DefaultLayout>
+      <h2 className="text-gray-900 dark:text-gray-100">Portfolios</h2>
+      <ul>
+        {menus.map((menu) => {
+          return (
+            <li
+              key={menu.key}
+              className="text-xl text-gray-900 dark:text-gray-100"
+            >
+              <Link href={menu.href} scroll={false}>
+                {menu.title}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </DefaultLayout>
   );
 }

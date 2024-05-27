@@ -36,7 +36,7 @@ export default class AsyncReducers {
    * })
    * ```
    */
-  static create = <State extends AsyncState>(
+  static create = <D = any, State = AsyncState<D[]>>(
     builder: ActionReducerMapBuilder<State>,
   ) => {
     return (

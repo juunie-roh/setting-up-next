@@ -47,13 +47,10 @@ const Pillar = (props: CylinderProps) => {
 };
 
 export default function CannonRaycastVehicle() {
-  const { ambient_intensity, spot_intensity } = useControls(
-    'Light Intensities',
-    {
-      ambient_intensity: { value: 0.1, min: 0, max: 2, step: 0.1 },
-      spot_intensity: { value: 1, min: 0, max: 3, step: 0.1 },
-    },
-  );
+  const { ambientIntensity, spotIntensity } = useControls('Light Intensities', {
+    ambientIntensity: { value: 0.1, min: 0, max: 2, step: 0.1 },
+    spotIntensity: { value: 1, min: 0, max: 3, step: 0.1 },
+  });
 
   return (
     <>
@@ -61,11 +58,11 @@ export default function CannonRaycastVehicle() {
         <Canvas shadows camera={{ fov: 50, position: [0, 5, 15] }}>
           <fog attach="fog" args={['#171720', 10, 50]} />
           <color attach="background" args={['#171720']} />
-          <ambientLight intensity={ambient_intensity} />
+          <ambientLight intensity={ambientIntensity} />
           <spotLight
             position={[10, 10, 10]}
             angle={Math.PI / 3}
-            intensity={spot_intensity}
+            intensity={spotIntensity}
             castShadow
             penumbra={1}
           />

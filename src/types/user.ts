@@ -1,8 +1,8 @@
-export type TOGGLE_LOGIN = 'TOGGLE_LOGIN';
-export type SET_NAME = 'SET_NAME';
-export type SET_ID = 'SET_ID';
-export type SET_INFO = 'SET_INFO';
-export type SET_AUTH = 'SET_AUTH';
+export type ToggleLogin = 'TOGGLE_LOGIN';
+export type SetName = 'SET_NAME';
+export type SetId = 'SET_ID';
+export type SetInfo = 'SET_INFO';
+export type SetAuth = 'SET_AUTH';
 
 export type UserState = {
   isLoggedIn: boolean;
@@ -13,8 +13,8 @@ export type UserState = {
 };
 
 export type UserAction =
-  | { type: TOGGLE_LOGIN; isLoggedIn: boolean }
-  | { type: SET_NAME; userName: string }
-  | { type: SET_ID; userId: string }
-  | { type: SET_INFO; userInfo: string }
-  | { type: SET_AUTH; authorization: string };
+  | { type: ToggleLogin; isLoggedIn: boolean }
+  | { type: SetName; userName: string }
+  | { type: SetId; userId: string }
+  | { type: SetInfo; userInfo: string }
+  | { type: SetAuth; authorization: string };

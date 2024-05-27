@@ -6,6 +6,7 @@
     "plugin:prettier/recommended"
   ],
   "rules": {
+    "import/extensions": "off",
     "prettier/prettier": [
       "error",
       {
