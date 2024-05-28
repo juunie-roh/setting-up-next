@@ -1,12 +1,13 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { catFactsReducer, counterReducer } from '@/libs/features';
+import { authReducer, catFactsReducer, counterReducer } from '@/libs/features';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       counter: counterReducer,
       catFacts: catFactsReducer,
+      auth: authReducer,
     },
   });
 };

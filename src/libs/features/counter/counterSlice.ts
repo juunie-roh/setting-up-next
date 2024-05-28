@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit';
 
-import type { AsyncState } from '@/libs/types';
+import type { AsyncState } from '@/types';
 
 const initialState: AsyncState<any> = {
   data: 0,

@@ -1,6 +1,6 @@
 import { createContext, type Dispatch, useContext, useReducer } from 'react';
 
-import type { UserAction, UserState } from '@/types/user';
+import type { UserAction, UserState } from '@/types';
 
 type UserDispatch = Dispatch<UserAction>;
 

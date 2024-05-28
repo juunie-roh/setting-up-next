@@ -7,7 +7,7 @@ import type {
 } from '@reduxjs/toolkit';
 import type { AsyncThunkConfig } from '@reduxjs/toolkit/dist/createAsyncThunk';
 
-import type { AsyncState } from '../../types';
+import type { AsyncState } from '@/types';
 
 export class AsyncReducers {
   /**

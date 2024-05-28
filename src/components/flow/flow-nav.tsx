@@ -5,8 +5,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
 
-import { useAuthDispatch, useAuthState } from '@/contexts/AuthContextProvider';
-import type { LnbSubLiProps } from '@/types/props';
+import { toggleLogin } from '@/libs/features';
+import { useAppDispatch, useAppSelector } from '@/libs/hooks';
+import type { LnbSubLiProps } from '@/types';
 
 import { Li } from './components';
 import styles from './flow-nav.module.css';
@@ -90,15 +91,11 @@ export default function Nav({
   isOpen: boolean;
   setIsOpen: Function;
 }) {
-  const { isLoggedIn, userName } = useAuthState();
+  const { isLoggedIn, userName } = useAppSelector((state) => state.auth);
   const [isSideMenuActive, setIsSideMenuActive] = useState(false);
   const [isLnbMenuOn, setIsLnbMenuOn] = useState(false);
 
-  const authDispatch = useAuthDispatch();
-
-  const onLoginClick = () => {
-    authDispatch({ type: 'TOGGLE_LOGIN', isLoggedIn: !isLoggedIn });
-  };
+  const dispatch = useAppDispatch();
 
   const onSideMenuClick = () => {
     setIsSideMenuActive(!isSideMenuActive);
@@ -300,12 +297,18 @@ export default function Nav({
         {isLoggedIn ? (
           <>
             <li>
-              <a href="/portfolio/flow" onClick={onLoginClick}>
+              <a
+                href="/portfolio/flow"
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(toggleLogin());
+                }}
+              >
                 로그아웃
               </a>
             </li>
             <li>
-              <button type="button" onClick={onLoginClick}>
+              <button type="button" onClick={() => dispatch(toggleLogin())}>
                 {userName}
               </button>
             </li>
@@ -313,12 +316,18 @@ export default function Nav({
         ) : (
           <>
             <li>
-              <a href="/portfolio/flow" onClick={onLoginClick}>
+              <a
+                href="/portfolio/flow"
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(toggleLogin());
+                }}
+              >
                 로그인
               </a>
             </li>
             <li>
-              <button type="button" onClick={onLoginClick}>
+              <button type="button" onClick={() => dispatch(toggleLogin())}>
                 무료 회원가입
               </button>
             </li>
@@ -328,7 +337,7 @@ export default function Nav({
 
       <ul className={styles.lnbSide}>
         <li>
-          <button type="button" onClick={onLoginClick}>
+          <button type="button" onClick={() => dispatch(toggleLogin())}>
             {isLoggedIn ? userName : '무료시작'}
           </button>
         </li>
