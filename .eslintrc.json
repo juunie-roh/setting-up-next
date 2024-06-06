@@ -8,6 +8,7 @@
   "rules": {
     "import/extensions": "off",
     "no-param-reassign": "off",
+    "no-underscore-dangle": "off",
     "prettier/prettier": [
       "error",
       {
@@ -69,7 +70,8 @@
           { "argsIgnorePattern": "^_" }
         ],
         // Custom Options:
-        "no-param-reassign": "off"
+        "no-param-reassign": "off",
+        "no-underscore-dangle": "off"
       }
     },
     // Configuration for testing

@@ -1,5 +1,3 @@
-/* eslint-disable no-underscore-dangle */
-
 'use client';
 
 import { decrement, getCatFacts, increment } from '@/libs/features';
