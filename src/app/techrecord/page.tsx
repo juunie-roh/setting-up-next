@@ -34,6 +34,12 @@ const menus = [
     ctgry: 'react-three/cannon',
     key: 5,
   },
+  {
+    title: 'Redux State Management',
+    href: 'techrecord/redux-example',
+    ctgry: 'react-redux',
+    key: 6,
+  },
 ];
 
 export const metadata: Metadata = {

@@ -14,11 +14,11 @@ export const getCatFacts = AsyncThunk.create('CatFacts')({
   method: 'GET',
 });
 
-const catFactsSlice = createSlice({
+const slice = createSlice({
   name: 'catFacts',
   initialState,
   reducers: {},
   extraReducers: (builder) => AsyncReducers.create(builder)(getCatFacts),
 });
 
-export const catFactsReducer = catFactsSlice.reducer;
+export const catFactsReducer = slice.reducer;
