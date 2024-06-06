@@ -7,8 +7,6 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
 
-import { decrement, increment } from '@/libs/features';
-import { useAppDispatch, useAppSelector } from '@/libs/hooks';
 import { antonio } from '@/styles/fonts';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -23,8 +21,6 @@ const menus = [
 export default function Header() {
   const path = usePathname();
   const [isOpen, setIsOpen] = useState(false);
-  const count = useAppSelector((state) => state.counter.data);
-  const dispatch = useAppDispatch();
 
   return (
     <header className={styles.header}>
@@ -47,15 +43,7 @@ export default function Header() {
           </ul>
         </nav>
       </div>
-      <div className={styles.redux}>
-        <button type="button" onClick={() => dispatch(decrement())}>
-          Decrease
-        </button>
-        <span>{count}</span>
-        <button type="button" onClick={() => dispatch(increment())}>
-          Increase
-        </button>
-      </div>
+
       <Link
         className={styles.vercel}
         href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
