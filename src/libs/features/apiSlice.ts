@@ -21,7 +21,7 @@ export const apiSlice = createApi({
     get: builder.query({
       query: (param: Param) =>
         param.data ? `${param.url}?${buildQuery(param.data)}` : param.url,
-      providesTags: (result, error, param) => [{ type: param.tag }], // Cash Provider Tags
+      providesTags: (_result, _error, param) => [{ type: param.tag }], // Cash Provider Tags
     }),
     post: builder.mutation({
       query: (param: Param) => ({
@@ -29,7 +29,7 @@ export const apiSlice = createApi({
         method: 'POST',
         body: param.body,
       }),
-      invalidatesTags: (result, error, param) => [{ type: param.tag }], // Cash Invalidator Tags
+      invalidatesTags: (_result, _error, param) => [{ type: param.tag }], // Cash Invalidator Tags
     }),
   }),
 });
