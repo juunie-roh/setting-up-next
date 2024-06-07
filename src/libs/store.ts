@@ -1,6 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import { authReducer, catFactsReducer, counterReducer } from '@/libs/features';
+import {
+  apiSlice,
+  authReducer,
+  catFactsReducer,
+  counterReducer,
+} from '@/libs/features';
 
 export const makeStore = () => {
   return configureStore({
@@ -8,7 +13,10 @@ export const makeStore = () => {
       counter: counterReducer,
       catFacts: catFactsReducer,
       auth: authReducer,
+      [apiSlice.reducerPath]: apiSlice.reducer,
     },
+    middleware: (getDefaultMiddleware) =>
+      getDefaultMiddleware().concat(apiSlice.middleware),
   });
 };
 
