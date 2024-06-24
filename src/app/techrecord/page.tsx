@@ -40,6 +40,12 @@ const menus = [
     ctgry: 'react-redux',
     key: 6,
   },
+  {
+    title: 'React Slider Component',
+    href: 'techrecord/slider',
+    ctgry: 'react',
+    key: 7,
+  }
 ];
 
 export const metadata: Metadata = {
