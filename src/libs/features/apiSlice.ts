@@ -1,5 +1,6 @@
 import { createApi, fetchBaseQuery } from '@reduxjs/toolkit/query/react';
 
+// Cache Refresh Tags
 const tagTypes = ['A', 'B', 'C'] as const;
 type Tag = (typeof tagTypes)[number];
 type Param = {
@@ -12,6 +13,7 @@ type Param = {
 const buildQuery = (data?: Record<string, any>) =>
   new URLSearchParams(data).toString();
 
+// api slice for external connection
 export const apiSlice = createApi({
   reducerPath: 'api',
   baseQuery: fetchBaseQuery({ baseUrl: '/' }),
