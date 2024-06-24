@@ -71,7 +71,8 @@
         ],
         // Custom Options:
         "no-param-reassign": "off",
-        "no-underscore-dangle": "off"
+        "no-underscore-dangle": "off",
+        "consistent-return": "off"
       }
     },
     // Configuration for testing

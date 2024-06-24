@@ -45,7 +45,7 @@ const menus = [
     href: 'techrecord/slider',
     ctgry: 'react',
     key: 7,
-  }
+  },
 ];
 
 export const metadata: Metadata = {

@@ -32,7 +32,8 @@ export default function Slider() {
     const onmousemove = (e: MouseEvent): void => {
       if (dragging) {
         const containerRect = container.getBoundingClientRect();
-        const newPosition = ((e.clientX - containerRect.left) / containerRect.width) * 100;
+        const newPosition =
+          ((e.clientX - containerRect.left) / containerRect.width) * 100;
 
         left.style.flex = `0 0 ${newPosition}%`;
         right.style.flex = `0 0 ${100 - newPosition}%`;
@@ -58,12 +59,16 @@ export default function Slider() {
   return (
     <div ref={containerRef} className={styles.container}>
       {/* Left Div */}
-      <div ref={leftRef} className={styles.content} style={{ flex: added ? '0 0 50%' : '0 0 100%' }}>
+      <div
+        ref={leftRef}
+        className={styles.content}
+        style={{ flex: added ? '0 0 50%' : '0 0 100%' }}
+      >
         LEFT CONTENT
         <div className={styles.buttons}>
-          <button 
-            type='button' 
-            onClick={() => 
+          <button
+            type="button"
+            onClick={() =>
               setAdded((_added) => {
                 const right = rightRef.current;
                 if (!right) return _added;
@@ -71,8 +76,8 @@ export default function Slider() {
                   right.style.flex = `0 0 50%`;
                 }
                 return !_added;
-              }
-            )}
+              })
+            }
           >
             {added ? 'CLOSE' : 'OPEN'}
           </button>
@@ -82,20 +87,24 @@ export default function Slider() {
 
       {/* Slider */}
       <div
-        role='none'
+        role="none"
         className={styles.slider}
         onMouseDown={(e) => e.preventDefault()}
         style={{ display: added ? 'block' : 'none' }}
       >
-          <div ref={sliderRef} />
+        <div ref={sliderRef} />
       </div>
       {/* Slider */}
 
       {/* Right Div */}
-      <div ref={rightRef} className={styles.content} style={{ display: added ? 'flex' : 'none' }}>
+      <div
+        ref={rightRef}
+        className={styles.content}
+        style={{ display: added ? 'flex' : 'none' }}
+      >
         RIGHT CONTENT
       </div>
       {/* Right Div */}
     </div>
-  )
+  );
 }
