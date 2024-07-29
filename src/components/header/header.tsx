@@ -36,7 +36,13 @@ export default function Header() {
                   className={`${path === menu.path ? styles.listItemOn : styles.listItemOff} ${styles.listItem}`}
                   key={menu.id}
                 >
-                  <Link href={menu.path}>{menu.name}</Link>
+                  <button
+                    type="button"
+                    aria-label="navigation button"
+                    className={`btn-link no-underline hover:no-underline ${path === menu.path ? 'font-semibold text-gray-900 dark:text-gray-100' : 'text-gray-700 dark:text-gray-400'}`}
+                  >
+                    <Link href={menu.path}>{menu.name}</Link>
+                  </button>
                 </li>
               );
             })}

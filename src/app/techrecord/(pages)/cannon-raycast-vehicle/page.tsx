@@ -12,7 +12,7 @@ import { useControls } from 'leva';
 import { type Ref, Suspense } from 'react';
 import type { Group, Mesh } from 'three';
 
-import Vehicle from '@/components/cannon/Beetle';
+import { Vehicle } from '@/components/cannon/Beetle';
 import { DefaultLayout, ThreeCanvas } from '@/layouts';
 
 const Plane = (props: PlaneProps) => {
