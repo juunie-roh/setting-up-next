@@ -9,6 +9,15 @@ const meta = {
   parameters: {
     layout: 'center',
   },
+  argTypes: {
+    href: {
+      control: 'text',
+      description: 'Links',
+      table: {
+        defaultValue: { summary: '#' }
+      }
+    }
+  }
 } satisfies Meta<typeof NextLinkBox>;
 
 export default meta;
