@@ -1,17 +1,11 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import {
-  apiSlice,
-  authReducer,
-  catFactsReducer,
-  counterReducer,
-} from '@/libs/features';
+import { apiSlice, authReducer, counterReducer } from '@/libs/features';
 
 export const makeStore = () => {
   return configureStore({
     reducer: {
       counter: counterReducer,
-      catFacts: catFactsReducer,
       auth: authReducer,
       [apiSlice.reducerPath]: apiSlice.reducer,
     },
