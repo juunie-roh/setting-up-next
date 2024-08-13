@@ -14,10 +14,10 @@ const meta = {
       control: 'text',
       description: 'Links',
       table: {
-        defaultValue: { summary: '#' }
-      }
-    }
-  }
+        defaultValue: { summary: '#' },
+      },
+    },
+  },
 } satisfies Meta<typeof NextLinkBox>;
 
 export default meta;
